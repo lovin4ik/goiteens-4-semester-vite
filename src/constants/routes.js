@@ -1,7 +1,8 @@
 import { firstLessonPage } from '../lessons/lesson1/firstLessonPage'
 import { homePage } from '../pages/home'
+import { LINKS } from './links'
 
 export const routes = [
-	{ path: '/', component: homePage },
-	{ path: '/lessons/lesson1/', component: firstLessonPage }
+	{ path: `${LINKS.HOME}`, component: homePage },
+	{ path: `${LINKS.LESSON}1/`, component: firstLessonPage }
 ]

@@ -1,3 +1,4 @@
+import { LINKS } from '../../constants/links'
 import { initFirstLesson } from './lesson1'
 import './lesson1.css'
 
@@ -8,7 +9,7 @@ export function firstLessonPage() {
 
 	return `
 		<a
-			href="/"
+			href="${LINKS.HOME}"
 			class="text-lg m-4 transition-colors duration-300 ease-in-out hover:text-primary"
 			>home</a
 		>
