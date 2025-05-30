@@ -1,0 +1,10 @@
+@import 'tailwindcss';
+
+@theme {
+	--color-primary: #b297dd;
+	--color-secondary: #181a1c;
+}
+
+#app {
+	@apply min-h-screen text-white bg-gradient-to-tr from-[#401e71] via-[#d76d77] to-[#fbab7b] flex flex-col items-center justify-center;
+}
