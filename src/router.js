@@ -1,5 +1,5 @@
-import { routes } from './constants/routes'
-import { NotFound } from './pages/NotFound'
+import { routes } from '@/constants/routes'
+import { NotFound } from '@/pages/NotFound'
 
 export function router() {
 	const currentHash = window.location.hash || '#/'

@@ -1,5 +1,5 @@
-import { mainLink } from '../components/mainLink'
-import { LESSONS } from '../constants/lessons'
+import { LESSONS } from '@/constants/lessons'
+import { mainLink } from '@/ui/mainLink'
 
 export function homePage() {
 	return `

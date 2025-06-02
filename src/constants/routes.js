@@ -1,8 +1,8 @@
-import { firstLessonPage } from '../lessons/lesson1/firstLessonPage'
-import { secondLessonPage } from '../lessons/lesson2/SecondLessonPage'
-import { thirdLessonPage } from '../lessons/lesson3/thirdLessonPage'
-import { homePage } from '../pages/home'
-import { practicePage } from '../pages/practice/practicePage'
+import { firstLessonPage } from '@/lessons/lesson1/firstLessonPage'
+import { secondLessonPage } from '@/lessons/lesson2/secondLessonPage'
+import { thirdLessonPage } from '@/lessons/lesson3/thirdLessonPage'
+import { homePage } from '@/pages/home'
+import { practicePage } from '@/pages/practice/practicePage'
 import { LINKS } from './links'
 
 export const routes = [

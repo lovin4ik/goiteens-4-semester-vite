@@ -1,5 +1,5 @@
-import { mainLink } from '../components/mainLink'
-import { LINKS } from '../constants/links'
+import { LINKS } from '@/constants/links'
+import { mainLink } from '@/ui/mainLink'
 
 export function NotFound() {
 	return `
