@@ -1,9 +1,9 @@
-import { LINKS } from '../../constants/links'
+import { LINKS } from '@/configs/links'
 
 export const PRACTICE_LIST = [
 	{
 		id: 1,
-		title: '6.2.25 - Концепція Intersection Observer (Практика)',
+		title: '',
 		link: `${LINKS.PRACTICE}`
 	}
 ]

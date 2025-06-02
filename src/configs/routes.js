@@ -1,9 +1,9 @@
-import { firstLessonPage } from '@/lessons/lesson1/firstLessonPage'
-import { secondLessonPage } from '@/lessons/lesson2/secondLessonPage'
-import { thirdLessonPage } from '@/lessons/lesson3/thirdLessonPage'
-import { homePage } from '@/pages/home'
+import { LINKS } from '@/configs/links'
+import { homePage } from '@/pages/homePage'
+import { firstLessonPage } from '@/pages/lessons/lesson1/firstLessonPage'
+import { secondLessonPage } from '@/pages/lessons/lesson2/secondLessonPage'
+import { thirdLessonPage } from '@/pages/lessons/lesson3/thirdLessonPage'
 import { practicePage } from '@/pages/practice/practicePage'
-import { LINKS } from './links'
 
 export const routes = [
 	{ path: `${LINKS.HOME}`, component: homePage },

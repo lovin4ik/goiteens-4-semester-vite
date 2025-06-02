@@ -1,4 +1,4 @@
-import { LINKS } from '@/constants/links'
+import { LINKS } from '@/configs/links'
 import { mainLink } from '@/ui/mainLink'
 
 export function NotFound() {
