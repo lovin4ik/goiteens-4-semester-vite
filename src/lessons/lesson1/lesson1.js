@@ -1,7 +1,7 @@
-import { FIRST_LESSON_IMAGES } from '../../constants/lesson1-images'
+import { FIRST_LESSON_IMAGES } from './lesson1-images'
 
 export function initFirstLesson() {
-	const imageGalary = document.querySelector('#imageGalary')
+	const imageGallery = document.querySelector('#imageGallery')
 	const slideWidth = 1240 + 30
 	const lightbox = document.querySelector('#lightbox')
 	const lightboxContent = document.querySelector('.lightbox__content')
@@ -12,19 +12,19 @@ export function initFirstLesson() {
 	let lightboxImages
 	let currentPosition = 0
 
-	imageGalary.innerHTML = FIRST_LESSON_IMAGES.map(element => {
+	imageGallery.innerHTML = FIRST_LESSON_IMAGES.map(element => {
 		return `
-	<li class="gallery__item">
-		<div class="gallery__link">
-			<img
-				class="gallery__image"
-				src="${element.preview}"
-				data-source="${element.original}"
-				alt="${element.description}"
-			/>
-		</div>
-	</li>
-	`
+			<li class="gallery__item">
+				<div class="gallery__link">
+					<img
+						class="gallery__image rounded-md"
+						src="${element.preview}"
+						data-source="${element.original}"
+						alt="${element.description}"
+					/>
+				</div>
+			</li>
+		`
 	}).join('')
 
 	const moveSlide = () => {
@@ -38,7 +38,7 @@ export function initFirstLesson() {
 		})
 	}
 
-	imageGalary.addEventListener('click', e => {
+	imageGallery.addEventListener('click', e => {
 		if (e.target.nodeName !== 'IMG') return
 
 		lightbox.classList.add(IS_OPEN)

@@ -1,3 +1,4 @@
+import { mainLink } from '../../components/mainLink'
 import { LINKS } from '../../constants/links'
 import { initSecondLesson } from './lesson2'
 
@@ -7,12 +8,7 @@ export function secondLessonPage() {
 	})
 
 	return `
-		<a
-			href="${LINKS.HOME}"
-			class="text-lg m-4 transition-colors duration-300 ease-in-out hover:text-primary"
-			id="homeLink"
-			>Home Page</a
-		>
+		${mainLink('Go to home', LINKS.HOME)}
 
 		<div class="slider mx-auto w-[400px] mt-4 h-[270px]">
 			<input

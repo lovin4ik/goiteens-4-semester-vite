@@ -1,3 +1,4 @@
+import { mainLink } from '../components/mainLink'
 import { LESSONS } from '../constants/lessons'
 
 export function homePage() {
@@ -10,13 +11,7 @@ export function homePage() {
 			<ul class="flex flex-col gap-2 mt-4" id="lessonsList">
 				${LESSONS.map(lesson => {
 					return `
-					<li>
-						<a
-							href="${lesson.link}"
-							class="text-lg transition-colors duration-300 hover:text-primary"
-							>${lesson.id}. ${lesson.title}</a
-						>
-					</li>
+					${mainLink(`${lesson.id}. ${lesson.title}`, lesson.link)}
 				`
 				}).join('')}
 			</ul>

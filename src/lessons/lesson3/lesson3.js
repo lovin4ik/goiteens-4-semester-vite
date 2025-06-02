@@ -22,7 +22,7 @@ export function initThirdLesson() {
 	}
 
 	//* рендеримо зображення і получаємо елементи
-	imagesList.innerHTML = renderImages(20)
+	imagesList.innerHTML = renderImages(100)
 	imagesListElements = document.querySelectorAll('#imagesListElement')
 
 	const observer = new IntersectionObserver(entries => {
@@ -37,7 +37,7 @@ export function initThirdLesson() {
 					//? додаємо анімацію
 					image.style.transform = 'translateY(0)'
 					image.style.opacity = '1'
-					//? очищаємо observer від зображення яке відображається
+					//? очищаемо observer від зображення яке відображається
 					observer.unobserve(image)
 				} else {
 					//? якщо зображення не відображається

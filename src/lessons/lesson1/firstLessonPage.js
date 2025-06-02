@@ -1,3 +1,4 @@
+import { mainLink } from '../../components/mainLink'
 import { LINKS } from '../../constants/links'
 import { initFirstLesson } from './lesson1'
 import './lesson1.css'
@@ -8,21 +9,14 @@ export function firstLessonPage() {
 	})
 
 	return `
-		<a
-			href="${LINKS.HOME}"
-			class="text-lg m-4 transition-colors duration-300 ease-in-out hover:text-primary"
-			>home</a
-		>
+		${mainLink('Go to home', LINKS.HOME)}
 
-		<ul class="gallery mx-auto mt-12 block" id="imageGalary"></ul>
-
-
-
+		<ul class="gallery mx-auto mt-12 block" id="imageGallery"></ul>
 
 		<div class="lightbox" id="lightbox">
 			<div class="lightbox__overlay"></div>
 
-			<div class="lightbox__content"></div>
+			<div class="lightbox__content rounded-lg"></div>
 
 			<div class="arrow-left absolute left-4 cursor-pointer">
 				<svg

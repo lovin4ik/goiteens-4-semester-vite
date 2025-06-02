@@ -100,5 +100,10 @@ export const LESSONS = [
 		id: 22,
 		title: 'Міні-проєкт: асинхронні функції async/await',
 		link: `${LINKS.LESSON}22/`
+	},
+	{
+		id: 22,
+		title: 'Практика на уроці',
+		link: LINKS.PRACTICE
 	}
 ]
