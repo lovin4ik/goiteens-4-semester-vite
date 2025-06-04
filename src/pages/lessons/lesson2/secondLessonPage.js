@@ -1,4 +1,5 @@
 import { LINKS } from '@/configs/links'
+import { heading } from '@/ui/heading'
 import { mainLink } from '@/ui/mainLink'
 import { initSecondLesson } from './lesson2'
 
@@ -10,6 +11,8 @@ export function secondLessonPage() {
 	return `
 		${mainLink('Go to home', LINKS.HOME)}
 
+		${heading('lesson-2', 'text-center mb-4')}
+		
 		<div class="slider mx-auto w-[400px] mt-4 h-[270px]">
 			<input
 				type="range"

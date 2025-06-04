@@ -1,4 +1,5 @@
 import { LINKS } from '@/configs/links'
+import { heading } from '@/ui/heading'
 import { mainLink } from '@/ui/mainLink'
 import { initFirstLesson } from './lesson1'
 import './lesson1.css'
@@ -10,6 +11,8 @@ export function firstLessonPage() {
 
 	return `
 		${mainLink('Go to home', LINKS.HOME)}
+
+		${heading('lesson-1', 'text-center mb-4')}
 
 		<ul class="gallery mx-auto mt-12 block" id="imageGallery"></ul>
 

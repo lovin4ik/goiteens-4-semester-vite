@@ -3,6 +3,7 @@ import { homePage } from '@/pages/homePage'
 import { firstLessonPage } from '@/pages/lessons/lesson1/firstLessonPage'
 import { secondLessonPage } from '@/pages/lessons/lesson2/secondLessonPage'
 import { thirdLessonPage } from '@/pages/lessons/lesson3/thirdLessonPage'
+import { fourthLessonPage } from '@/pages/lessons/lesson4/fourthLessonPage'
 import { practicePage } from '@/pages/practice/practicePage'
 
 export const routes = [
@@ -10,5 +11,6 @@ export const routes = [
 	{ path: `${LINKS.LESSON}1/`, component: firstLessonPage },
 	{ path: `${LINKS.LESSON}2/`, component: secondLessonPage },
 	{ path: `${LINKS.LESSON}3/`, component: thirdLessonPage },
-	{ path: `${LINKS.PRACTICE}/`, component: practicePage }
+	{ path: `${LINKS.LESSON}4/`, component: fourthLessonPage },
+	{ path: `${LINKS.PRACTICE}`, component: practicePage }
 ]

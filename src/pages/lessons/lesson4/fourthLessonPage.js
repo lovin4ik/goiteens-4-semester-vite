@@ -1,17 +1,16 @@
 import { LINKS } from '@/configs/links'
 import { heading } from '@/ui/heading'
 import { mainLink } from '@/ui/mainLink'
-import { initThirdLesson } from './lesson3'
+import { initFourthLesson } from './initFourthLesson'
 
-export function thirdLessonPage() {
+export function fourthLessonPage() {
 	requestAnimationFrame(() => {
-		initThirdLesson()
+		initFourthLesson()
 	})
-
 	return `
-		${mainLink('Go to home', LINKS.HOME, 'mt-12')}
+		${mainLink('Go to home', LINKS.HOME)}
 
-		${heading('lesson-3', 'text-center mb-4')}
+		${heading('lesson-4', 'text-center mb-4')}
 
 		<button
 			class="mb-4 bg-white text-black rounded-2xl py-2 px-4 transition-colors duration-300 ease-in-out hover:bg-white/80 font- cursor-pointer"
@@ -19,9 +18,5 @@ export function thirdLessonPage() {
 		>
 			Запустити
 		</button>
-		<ul
-			class="flex gap-8 flex-col justify-center items-center mb-4"
-			id="imagesList"
-		></ul>
 	`
 }

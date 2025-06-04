@@ -9,14 +9,14 @@
 		"build": "vite build",
 		"preview": "vite preview",
 		"predeploy": "vite build",
-		"deploy": "gh-pages -d dist"
+		"deploy": "gh-pages -d dist",
+		"initFourthLesson": "node src/pages/lessons/lesson4/lesson4.js"
 	},
 	"devDependencies": {
 		"vite": "^6.3.5"
 	},
 	"dependencies": {
 		"@tailwindcss/vite": "^4.1.8",
-		"boxicons": "^2.1.4",
 		"gh-pages": "^6.3.0",
 		"lodash": "^4.17.21",
 		"tailwindcss": "^4.1.8"
