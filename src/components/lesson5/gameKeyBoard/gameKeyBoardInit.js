@@ -2,7 +2,7 @@ import { defaultModules, error, notice, success } from '@pnotify/core'
 import * as PNotifyMobile from '@pnotify/mobile'
 
 import { shuffleArray } from '@/utils/shufleArray'
-import { startTimer, stopTimer } from '@/utils/timer'
+import { useTimer } from '@/utils/timer'
 import { useLocalStorage } from '@/utils/useLocalStorage'
 
 import { GAME_STATUS } from '@/pages/lessons/lesson5/gameStatus.data'
@@ -16,7 +16,7 @@ let currentStatusGame = GAME_STATUS.NEW_GAME
 
 let keyPressHandler = null
 let currentElapsedTime = null
-
+const { startTimer, stopTimer } = useTimer()
 export function gameKeyBoardInit() {
 	const newGameBtn = document.getElementById('newGameBtn')
 	const keyText = document.getElementById('key')

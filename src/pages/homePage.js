@@ -1,6 +1,6 @@
 import { mainLink } from '@/ui/mainLink'
 
-import { LESSONS } from '@/constants/lessons.data'
+import { LESSONS } from '@/constants/lessons.constant'
 
 export function homePage() {
 	return `

@@ -1,7 +1,7 @@
 let timerInterval = null
 let timerStartTime = null
 
-export function startTimer(callback) {
+function startTimer(callback) {
 	stopTimer()
 
 	timerStartTime = Date.now()
@@ -11,7 +11,11 @@ export function startTimer(callback) {
 	}, 100)
 }
 
-export function stopTimer() {
+function stopTimer() {
 	clearInterval(timerInterval)
 	timerInterval = null
+}
+
+export const useTimer = () => {
+	return { startTimer, stopTimer }
 }

@@ -27,7 +27,7 @@ export function chartTaskInit() {
 	const chartCanvas = document.getElementById('salesChart')
 	const ctx = chartCanvas.getContext('2d')
 
-	const salesChart = new Chart(ctx, {
+	new Chart(ctx, {
 		type: 'line',
 		data: fifthChartData,
 		options: {
