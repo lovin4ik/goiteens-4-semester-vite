@@ -1,5 +1,5 @@
 import { router } from '@/router/router'
-import '@/styles/style.scss'
+import '@/styles/style.css'
 
 window.addEventListener('DOMContentLoaded', () => {
 	router()
