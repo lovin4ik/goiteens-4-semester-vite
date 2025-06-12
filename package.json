@@ -13,8 +13,12 @@
 		"initFourthLesson": "node src/pages/lessons/lesson4/lesson4.js"
 	},
 	"devDependencies": {
+		"@eslint/js": "^9.28.0",
 		"@pnotify/core": "^5.2.0",
 		"@trivago/prettier-plugin-sort-imports": "^5.2.2",
+		"eslint": "^9.28.0",
+		"globals": "^16.2.0",
+		"sass": "^1.89.2",
 		"vite": "^6.3.5"
 	},
 	"dependencies": {
