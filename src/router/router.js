@@ -1,4 +1,4 @@
-import { routes } from '@/configs/routes'
+import { routes } from './routes'
 import { NotFound } from '@/pages/NotFound'
 
 export function router() {
