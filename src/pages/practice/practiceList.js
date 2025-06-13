@@ -1,4 +1,4 @@
-import { LINKS } from '@/configs/links'
+import { LINKS } from '@/config/links'
 
 export const PRACTICE_LIST = [
 	{

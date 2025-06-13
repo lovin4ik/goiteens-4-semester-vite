@@ -1,4 +1,5 @@
-import { LINKS } from '@/configs/links'
+import { LINKS } from '@/config/links'
+
 import { homePage } from '@/pages/homePage'
 import { firstLessonPage } from '@/pages/lessons/lesson1/firstLessonPage'
 import { secondLessonPage } from '@/pages/lessons/lesson2/secondLessonPage'

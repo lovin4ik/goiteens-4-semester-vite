@@ -2,7 +2,6 @@ import { FIRST_LESSON_IMAGES } from './lesson1-images'
 
 export function initFirstLesson() {
 	const imageGallery = document.querySelector('#imageGallery')
-	const slideWidth = 1240 + 30
 	const lightbox = document.querySelector('#lightbox')
 	const lightboxContent = document.querySelector('.lightbox__content')
 	const btnClose = document.querySelector('.lightbox__button')
@@ -10,6 +9,7 @@ export function initFirstLesson() {
 	const arrowLeft = document.querySelector('.arrow-left')
 	const arrowRight = document.querySelector('.arrow-right')
 	let lightboxImages
+	let slideWidth = 0
 	let currentPosition = 0
 
 	imageGallery.innerHTML = FIRST_LESSON_IMAGES.map(element => {
@@ -43,10 +43,13 @@ export function initFirstLesson() {
 
 		lightbox.classList.add(IS_OPEN)
 		lightboxContent.innerHTML = FIRST_LESSON_IMAGES.map(image => {
-			return `<img class="lightbox__image" src="${image.original}" alt="${image.description}" />`
+			return `<img class="lightbox__image rounded-md" src="${image.original}" alt="${image.description}" />`
 		}).join('')
 
 		lightboxImages = document.querySelectorAll('.lightbox__image')
+
+		slideWidth = lightboxImages[0].clientWidth + 30
+		console.log('slideWidth', slideWidth)
 
 		lightbox.addEventListener('click', e => {
 			if (e.target.nodeName === 'IMG') return

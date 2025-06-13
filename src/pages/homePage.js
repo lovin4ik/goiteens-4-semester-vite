@@ -4,16 +4,16 @@ import { LESSONS } from '@/constants/lessons.constant'
 
 export function homePage() {
 	return `
-	  <div class="min-h-screen flex items-center justify-center py-8 flex-col">
-			<h1 class="text-3xl font-bold text-center">
+	  <div class="container mx-auto min-h-screen flex items-center justify-center py-8 flex-col px-2 md:px-0">
+			<h1 class="font-bold text-center text-xl md:text-2xl 3xl:text-3xl">
 				Це моя сторінка для здачи завданнь для школи GoIteens
 			</h1>
 
 			<ul class="flex flex-col gap-2 mt-4" id="lessonsList">
 				${LESSONS.map(lesson => {
 					return `
-					${mainLink(`${lesson.id}. ${lesson.title}`, lesson.link)}
-				`
+						${mainLink(`${lesson.id}. ${lesson.title}`, lesson.link)}
+					`
 				}).join('')}
 			</ul>
 		</div>

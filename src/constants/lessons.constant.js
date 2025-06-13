@@ -1,4 +1,4 @@
-import { LINKS } from '@/configs/links.js'
+import { LINKS } from '@/config/links.js'
 
 export const LESSONS = [
 	{

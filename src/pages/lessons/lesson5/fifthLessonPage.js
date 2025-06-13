@@ -4,8 +4,9 @@ import { gameKeyBoard } from '@/components/lesson5/gameKeyBoard/gameKeyBoard'
 import { heading } from '@/ui/heading'
 import { mainLink } from '@/ui/mainLink'
 
+import { LINKS } from '@/config/links'
+
 import { initFifthLesson } from './lesson5'
-import { LINKS } from '@/configs/links'
 
 import '@pnotify/core/dist/BrightTheme.css'
 import '@pnotify/core/dist/PNotify.css'

@@ -1,6 +1,8 @@
-import { LINKS } from '@/configs/links'
 import { heading } from '@/ui/heading'
 import { mainLink } from '@/ui/mainLink'
+
+import { LINKS } from '@/config/links'
+
 import { initThirdLesson } from './lesson3'
 
 export function thirdLessonPage() {

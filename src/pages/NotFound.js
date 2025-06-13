@@ -1,7 +1,8 @@
-import { LINKS } from '@/configs/links'
 import { mainLink } from '@/ui/mainLink'
 
-export function NotFound() {
+import { LINKS } from '@/config/links'
+
+export function notFoundPage() {
 	return `
 		<div class="min-h-screen flex items-center justify-center py-8 flex-col">
 			<h1 class="text-center text-3xl font-bold">404 Not Found</h1>

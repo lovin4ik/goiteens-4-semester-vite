@@ -1,5 +1,7 @@
-import { LINKS } from '@/configs/links'
 import { mainLink } from '@/ui/mainLink'
+
+import { LINKS } from '@/config/links'
+
 import { PRACTICE_LIST } from './practiceList'
 
 export function practicePage() {
