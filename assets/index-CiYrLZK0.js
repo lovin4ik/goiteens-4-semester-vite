@@ -33,6 +33,7 @@ var Cy=Object.defineProperty;var Ty=(i,t,e)=>t in i?Cy(i,t,{enumerable:!0,config
 						src="${w.preview}"
 						data-source="${w.original}"
 						alt="${w.description}"
+						loading="lazy"
 					/>
 				</div>
 			</li>
@@ -129,6 +130,7 @@ function print() { __p += __j.call(arguments, '') }
 				<img
 					src=""
 					class="slider__image max-w-full bg-white/60 h-full w-full"
+					loading="lazy"
 				/>
 			</div>
 		</div>
