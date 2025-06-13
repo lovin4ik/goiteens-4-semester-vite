@@ -21,6 +21,7 @@ export function initFirstLesson() {
 						src="${element.preview}"
 						data-source="${element.original}"
 						alt="${element.description}"
+						loading="lazy"
 					/>
 				</div>
 			</li>

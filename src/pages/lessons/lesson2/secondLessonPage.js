@@ -27,6 +27,7 @@ export function secondLessonPage() {
 				<img
 					src=""
 					class="slider__image max-w-full bg-white/60 h-full w-full"
+					loading="lazy"
 				/>
 			</div>
 		</div>
