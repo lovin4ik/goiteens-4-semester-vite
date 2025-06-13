@@ -1,7 +1,7 @@
 import { defaultModules, error, notice, success } from '@pnotify/core'
 import * as PNotifyMobile from '@pnotify/mobile'
 
-import { shuffleArray } from '@/utils/shufleArray'
+import { shuffleArray } from '@/utils/shuffleArray'
 import { useTimer } from '@/utils/timer'
 import { useLocalStorage } from '@/utils/useLocalStorage'
 
