@@ -1,3 +1,13 @@
+/**
+ * @typedef {Object} ChartData
+ * @property {string[]} labels
+ * @property {Object[]} datasets
+ * @property {string} datasets[].label
+ * @property {number[]} datasets[].data
+ * @property {string} datasets[].backgroundColor
+ * @property {string} datasets[].borderColor
+ * @property {number} datasets[].borderWidth
+ */
 export const fifthChartData = {
 	labels: [
 		'1',

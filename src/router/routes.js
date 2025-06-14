@@ -7,6 +7,15 @@ import { thirdLessonPage } from '@/pages/lessons/lesson3/thirdLessonPage'
 import { fourthLessonPage } from '@/pages/lessons/lesson4/fourthLessonPage'
 import { fifthLessonPage } from '@/pages/lessons/lesson5/fifthLessonPage'
 
+/**
+ * @typedef {Object} Route
+ * @property {string} path
+ * @property {string} component
+ */
+
+/**
+ * @type {Route[]}
+ */
 export const routes = [
 	{ path: `${LINKS.HOME}`, component: homePage },
 	{ path: `${LINKS.LESSON}1/`, component: firstLessonPage },

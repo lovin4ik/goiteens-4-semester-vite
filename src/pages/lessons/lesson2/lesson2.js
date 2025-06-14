@@ -22,7 +22,7 @@ export function initSecondLesson() {
 	const secondLessonContainer = document.querySelector('.secondLessonContainer')
 	const followerDiv = document.querySelector('.followerDiv')
 
-	const moveFolower = e => {
+	const moveFollower = e => {
 		const outerRect = secondLessonContainer.getBoundingClientRect()
 		const mouseX = e.clientX - outerRect.left
 		const mouseY = e.clientY - outerRect.top
@@ -44,7 +44,7 @@ export function initSecondLesson() {
 		followerDiv.style.left = `${x}px`
 	}
 
-	const debouncedMoveFolower = _.debounce(moveFolower, 100)
+	const debouncedMoveFollower = _.debounce(moveFollower, 100)
 
-	secondLessonContainer.addEventListener('mousemove', debouncedMoveFolower)
+	secondLessonContainer.addEventListener('mousemove', debouncedMoveFollower)
 }

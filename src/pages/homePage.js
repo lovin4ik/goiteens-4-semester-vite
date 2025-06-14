@@ -1,3 +1,7 @@
+/**
+ * @returns {string}
+ */
+
 export function homePage() {
 	return `
 	  <div class="container mx-auto min-h-screen flex items-center justify-center py-8 flex-col px-2 md:px-0">

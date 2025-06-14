@@ -1,3 +1,8 @@
+/**
+ * @param {string} key
+ * @param {any} initialValue
+ * @returns {{ get: function, set: function, subscribe: function }}
+ */
 export function useLocalStorage(key, initialValue) {
 	let subscribers = []
 

@@ -2,6 +2,10 @@ import { mainLink } from '@/ui/mainLink'
 
 import { LESSONS } from '../sidebar.data'
 
+/**
+ * @returns {string}
+ */
+
 export function sidebarList() {
 	return `
 		${LESSONS.map(lesson => {

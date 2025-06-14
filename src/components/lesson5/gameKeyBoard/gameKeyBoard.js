@@ -1,5 +1,9 @@
 import { mainBtn } from '@/ui/mainBtn'
 
+/**
+ * @returns {string}
+ */
+
 export function gameKeyBoard() {
 	return `
 		<div class="flex flex-col items-center justify-center">

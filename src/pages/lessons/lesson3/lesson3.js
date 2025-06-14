@@ -4,6 +4,10 @@ export function initThirdLesson() {
 	const beginBtn = document.getElementById('beginBtn')
 	let imagesListElements
 
+	/**
+	 * @returns {string}
+	 * @param {number} count
+	 */
 	//* функція яка робить масив зі зображеннями і повертає його
 	const renderImages = count => {
 		return Array.from({ length: count }, (_, i) => {

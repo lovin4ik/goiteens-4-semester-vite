@@ -1,3 +1,11 @@
+/**
+ * @typedef {Object} Image
+ * @property {string} preview
+ * @property {string} original
+ * @property {string} description
+ * @typedef {Image[]} Images
+ */
+
 export const FIRST_LESSON_IMAGES = [
 	{
 		preview:

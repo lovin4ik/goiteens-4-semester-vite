@@ -2,6 +2,10 @@ import { mainLink } from '@/ui/mainLink'
 
 import { LINKS } from '@/config/links'
 
+/**
+ * @returns {string}
+ */
+
 export function notFoundPage() {
 	return `
 		<div class="min-h-screen flex items-center justify-center py-8 flex-col">

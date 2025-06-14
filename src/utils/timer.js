@@ -1,6 +1,8 @@
 let timerInterval = null
 let timerStartTime = null
-
+/**
+ * @param {function} callback
+ */
 function startTimer(callback) {
 	stopTimer()
 
@@ -16,6 +18,9 @@ function stopTimer() {
 	timerInterval = null
 }
 
+/**
+ * @returns {{startTimer: function, stopTimer: function}}
+ */
 export const useTimer = () => {
 	return { startTimer, stopTimer }
 }

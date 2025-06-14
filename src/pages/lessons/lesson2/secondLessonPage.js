@@ -2,13 +2,17 @@ import { heading } from '@/ui/heading'
 
 import { initSecondLesson } from './lesson2'
 
+/**
+ * @returns {string}
+ */
+
 export function secondLessonPage() {
 	requestAnimationFrame(() => {
 		initSecondLesson()
 	})
 
 	return `
-		${heading('lesson-2', 'text-center mb-4')}
+		${heading({ children: 'lesson-1', className: 'text-center mb-4' })}
 		
 		<div class="slider mx-auto w-[400px] mt-4 h-[270px]">
 			<input

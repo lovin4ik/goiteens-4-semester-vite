@@ -1,5 +1,13 @@
 import { LINKS } from '@/config/links.js'
 
+/**
+ * @typedef {Object} Image
+ * @property {number} id
+ * @property {string} title
+ * @property {string} link
+ * @typedef {Image[]} Images
+ */
+
 export const LESSONS = [
 	{
 		id: 1,

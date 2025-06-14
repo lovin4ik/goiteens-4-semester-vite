@@ -9,13 +9,17 @@ import '@pnotify/core/dist/BrightTheme.css'
 import '@pnotify/core/dist/PNotify.css'
 import '@pnotify/mobile/dist/PNotifyMobile.css'
 
+/**
+ * @returns {string}
+ */
+
 export function fifthLessonPage() {
 	requestAnimationFrame(() => {
 		initFifthLesson()
 	})
 
 	return `
-		${heading('lesson-5', 'text-center mb-2')}
+		${heading({ children: 'lesson-1', className: 'text-center mb-2' })}
 
 		${gameKeyBoard()}
 

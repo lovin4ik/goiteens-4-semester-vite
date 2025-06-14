@@ -3,6 +3,10 @@ import { heading } from '@/ui/heading'
 import { initFirstLesson } from './lesson1'
 import './lesson1.css'
 
+/**
+ * @returns {string}
+ */
+
 export function firstLessonPage() {
 	requestAnimationFrame(() => {
 		initFirstLesson()
@@ -10,7 +14,7 @@ export function firstLessonPage() {
 
 	return `
 		<div class="container mx-auto min-h-screen flex items-center justify-center py-8 flex-col px-2"> 
-			${heading('lesson-1', 'text-center mb-4')}
+			${heading({ children: 'lesson-1', className: 'text-center mb-4' })}
 
 			<ul 
 				class="grid w-full max-w-[1200px] grid-cols-1 auto-rows-[180px] gap-2 p-0 list-none mx-auto sm:grid-cols-2 sm:auto-rows-[200px] sm:gap-3 md:grid-cols-2 md:auto-rows-[220px] lg:grid-cols-3 lg:auto-rows-[220px] xl:grid-cols-[repeat(auto-fill,minmax(380px,1fr))] xl:auto-rows-[240px] xl:w-[1200px] xl:gap-3" 

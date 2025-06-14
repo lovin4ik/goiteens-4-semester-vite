@@ -1,3 +1,7 @@
+/**
+ * @returns {string}
+ */
+
 export function chartTask() {
 	return `
 		<div class="mt-4">
