@@ -6,7 +6,7 @@
 	"homepage": "https://lovin4ik.github.io/goiteens-4-semester-vite",
 	"scripts": {
 		"dev": "vite",
-		"build": "vite build --base=/goiteens-4-semester-vite/s",
+		"build": "vite build --base=/goiteens-4-semester-vite/",
 		"preview": "vite preview",
 		"predeploy": "vite build",
 		"deploy": "gh-pages -d dist",
