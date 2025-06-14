@@ -6,6 +6,7 @@
 	/** Colors **/
 	--color-primary: #b297dd;
 	--color-secondary: #181a1c;
+	--color-sidebar: #242424;
 
 	/** Fonts **/
 	--font-poppins: 'Poppins', sans-serif;
@@ -18,8 +19,16 @@
 	--breakpoint-xl: 1280px;
 	--breakpoint-2xl: 1440px;
 	--breakpoint-3xl: 1600px;
+
+	/** radius **/
+	--radius-main: 12px;
+	--radius-lg: 20px;
+}
+
+body {
+	@apply overflow-hidden;
 }
 
 #app {
-	@apply min-h-screen text-white bg-white bg-gradient-to-tr from-[#401e71] via-[#d76d77] to-[#fbab7b] flex flex-col items-center justify-center font-poppins bg-no-repeat bg-cover bg-fixed dark:bg-black dark:bg-radial-[at_50%_90%] dark:from-[#8220cd]/55 dark:via-secondary dark:to-black;
+	@apply min-h-screen grid grid-cols-[284px_1fr] grid-rows-[74px_1fr] gap-0 bg-gradient-to-tr from-[#401e71] via-[#d76d77] to-[#fbab7b] font-poppins overflow-hidden text-white bg-white bg-no-repeat bg-cover bg-fixed dark:bg-black dark:bg-radial-[at_50%_90%] dark:from-[#8220cd]/55 dark:via-secondary dark:to-black;
 }

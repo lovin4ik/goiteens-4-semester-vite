@@ -6,7 +6,6 @@ import { secondLessonPage } from '@/pages/lessons/lesson2/secondLessonPage'
 import { thirdLessonPage } from '@/pages/lessons/lesson3/thirdLessonPage'
 import { fourthLessonPage } from '@/pages/lessons/lesson4/fourthLessonPage'
 import { fifthLessonPage } from '@/pages/lessons/lesson5/fifthLessonPage'
-import { practicePage } from '@/pages/practice/practicePage'
 
 export const routes = [
 	{ path: `${LINKS.HOME}`, component: homePage },
@@ -14,6 +13,5 @@ export const routes = [
 	{ path: `${LINKS.LESSON}2/`, component: secondLessonPage },
 	{ path: `${LINKS.LESSON}3/`, component: thirdLessonPage },
 	{ path: `${LINKS.LESSON}4/`, component: fourthLessonPage },
-	{ path: `${LINKS.LESSON}5/`, component: fifthLessonPage },
-	{ path: `${LINKS.PRACTICE}`, component: practicePage }
+	{ path: `${LINKS.LESSON}5/`, component: fifthLessonPage }
 ]

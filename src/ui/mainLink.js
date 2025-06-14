@@ -1,6 +1,14 @@
 import { twMerge } from 'tailwind-merge'
 
-export function mainLink(children, link, className) {
+/**
+ *
+ * @param {Object} options
+ * @param {string} options.children
+ * @param {string} options.link
+ * @param {string} options.className
+ * @returns {string}
+ */
+export function mainLink({ children, link, className }) {
 	return `
 		<a 
 		href="${link}" 

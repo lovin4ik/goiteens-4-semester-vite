@@ -1,7 +1,4 @@
 import { heading } from '@/ui/heading'
-import { mainLink } from '@/ui/mainLink'
-
-import { LINKS } from '@/config/links'
 
 import { initFirstLesson } from './lesson1'
 import './lesson1.css'
@@ -13,12 +10,10 @@ export function firstLessonPage() {
 
 	return `
 		<div class="container mx-auto min-h-screen flex items-center justify-center py-8 flex-col px-2"> 
-			${mainLink('Go to home', LINKS.HOME)}
-
 			${heading('lesson-1', 'text-center mb-4')}
 
 			<ul 
-				class="grid w-full max-w-[1200px] grid-cols-1 auto-rows-[180px] gap-2 p-0 list-none mx-auto mt-6 sm:grid-cols-2 sm:auto-rows-[200px] sm:gap-3 md:grid-cols-2 md:auto-rows-[220px] lg:grid-cols-3 lg:auto-rows-[220px] xl:grid-cols-[repeat(auto-fill,minmax(380px,1fr))] xl:auto-rows-[240px] xl:w-[1200px] xl:gap-3 xl:mt-12" 
+				class="grid w-full max-w-[1200px] grid-cols-1 auto-rows-[180px] gap-2 p-0 list-none mx-auto sm:grid-cols-2 sm:auto-rows-[200px] sm:gap-3 md:grid-cols-2 md:auto-rows-[220px] lg:grid-cols-3 lg:auto-rows-[220px] xl:grid-cols-[repeat(auto-fill,minmax(380px,1fr))] xl:auto-rows-[240px] xl:w-[1200px] xl:gap-3" 
 				id="imageGallery"
 			>
 			</ul>

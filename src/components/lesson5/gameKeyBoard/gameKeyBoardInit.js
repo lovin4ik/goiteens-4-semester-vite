@@ -16,7 +16,9 @@ let currentStatusGame = GAME_STATUS.NEW_GAME
 
 let keyPressHandler = null
 let currentElapsedTime = null
+
 const { startTimer, stopTimer } = useTimer()
+
 export function gameKeyBoardInit() {
 	const newGameBtn = document.getElementById('newGameBtn')
 	const keyText = document.getElementById('key')

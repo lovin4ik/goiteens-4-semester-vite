@@ -1,7 +1,4 @@
 import { heading } from '@/ui/heading'
-import { mainLink } from '@/ui/mainLink'
-
-import { LINKS } from '@/config/links'
 
 import { initFourthLesson } from './initFourthLesson'
 
@@ -10,8 +7,6 @@ export function fourthLessonPage() {
 		initFourthLesson()
 	})
 	return `
-		${mainLink('Go to home', LINKS.HOME)}
-
 		${heading('lesson-4', 'text-center mb-4')}
 
 		<button

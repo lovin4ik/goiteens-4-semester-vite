@@ -7,5 +7,5 @@ export function router() {
 	const potentialMatch = routes.find(route => route.path === currentHash)
 	const view = potentialMatch ? potentialMatch.component : notFound
 
-	document.querySelector('#app').innerHTML = view()
+	document.querySelector('#layout').innerHTML = view()
 }
