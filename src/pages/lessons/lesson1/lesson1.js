@@ -17,7 +17,7 @@ export function initFirstLesson() {
 			<li class="gallery__item">
 				<div class="gallery__link">
 					<img
-						class="gallery__image rounded-md"
+						class="gallery__image rounded-md bg-white/10"
 						src="${element.preview}"
 						data-source="${element.original}"
 						alt="${element.description}"

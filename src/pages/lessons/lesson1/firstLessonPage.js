@@ -7,7 +7,7 @@ import './lesson1.css'
  * @returns {string}
  */
 
-export function firstLessonPage() {
+export async function firstLessonPage() {
 	requestAnimationFrame(() => {
 		initFirstLesson()
 	})

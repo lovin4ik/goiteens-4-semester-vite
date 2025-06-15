@@ -1,10 +1,15 @@
 import { mainBtn } from '@/ui/mainBtn'
 
+import { gameKeyBoardInit } from './gameKeyBoardInit'
+
 /**
  * @returns {string}
  */
 
 export function gameKeyBoard() {
+	requestAnimationFrame(() => {
+		gameKeyBoardInit()
+	})
 	return `
 		<div class="flex flex-col items-center justify-center">
 			<h3>Натисніть на показану клавішу</h3>

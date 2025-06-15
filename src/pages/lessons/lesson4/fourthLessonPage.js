@@ -1,4 +1,5 @@
 import { heading } from '@/ui/heading'
+import { mainBtn } from '@/ui/mainBtn'
 
 import { initFourthLesson } from './initFourthLesson'
 
@@ -6,18 +7,19 @@ import { initFourthLesson } from './initFourthLesson'
  * @returns {string}
  */
 
-export function fourthLessonPage() {
+export async function fourthLessonPage() {
 	requestAnimationFrame(() => {
 		initFourthLesson()
 	})
 	return `
-		${heading({ children: 'lesson-1', className: 'text-center mb-4' })}
-
-		<button
-			class="mb-4 bg-white text-black rounded-2xl py-2 px-4 transition-colors duration-300 ease-in-out hover:bg-white/80 font- cursor-pointer"
-			id="beginBtn"
-		>
-			Запустити
-		</button>
+		<div class="flex flex-col justify-center items-center h-full">
+			${heading({ children: 'lesson-4', className: 'text-center mb-4' })}
+			
+			${mainBtn({
+				children: 'Запустити',
+				id: 'beginBtn',
+				className: 'mb-4'
+			})}
+		</div>
 	`
 }

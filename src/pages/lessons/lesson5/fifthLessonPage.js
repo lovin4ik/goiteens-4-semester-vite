@@ -3,26 +3,22 @@ import { gameKeyBoard } from '@/components/lesson5/gameKeyBoard/gameKeyBoard'
 
 import { heading } from '@/ui/heading'
 
-import { initFifthLesson } from './lesson5'
-
 import '@pnotify/core/dist/BrightTheme.css'
 import '@pnotify/core/dist/PNotify.css'
 import '@pnotify/mobile/dist/PNotifyMobile.css'
 
 /**
- * @returns {string}
+ *
+ * @returns {Promise<string>}
  */
-
-export function fifthLessonPage() {
-	requestAnimationFrame(() => {
-		initFifthLesson()
-	})
-
+export async function fifthLessonPage() {
 	return `
-		${heading({ children: 'lesson-1', className: 'text-center mb-2' })}
+		<div class="flex flex-col justify-center items-center">
+			${heading({ children: 'lesson-1', className: 'text-center mb-2' })}
 
-		${gameKeyBoard()}
-
-		${chartTask()}
+			${gameKeyBoard()}
+			
+			${chartTask()}
+		</div>
 	`
 }

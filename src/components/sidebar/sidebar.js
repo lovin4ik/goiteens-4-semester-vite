@@ -17,7 +17,7 @@ export function sidebar() {
 				className: 'text-xl'
 			})}
 
-			<ul class="flex flex-col gap-0.5 mt-2 overflow-auto" id="sidebarList">
+			<ul class="flex flex-col gap-0.5 mt-2 overflow-x-auto max-h-full" id="sidebarList">
 				${sidebarList()}
 			</ul>
 		</aside>
