@@ -1,11 +1,12 @@
 import { twMerge } from 'tailwind-merge'
 
-type MainLinkProps = {
+interface MainLinkProps {
 	children: string
 	link: string
 	className?: string
 	target?: '_self' | '_blank' | '_parent' | '_top' | 'framename'
 }
+
 export function mainLink({
 	children,
 	link,

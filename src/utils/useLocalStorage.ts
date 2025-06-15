@@ -1,8 +1,8 @@
-export function useLocalStorage(key: string, initialValue: any) {
-	let subscribers: Array<(value: any) => void> = []
+export function useLocalStorage<T>(key: string, initialValue: T) {
+	let subscribers: Array<(value: T) => void> = []
 
 	let stored = localStorage.getItem(key)
-	let value: any
+	let value: T
 
 	try {
 		value = stored ? JSON.parse(stored) : initialValue

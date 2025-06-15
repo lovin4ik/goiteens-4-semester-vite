@@ -1,6 +1,6 @@
 import { twMerge } from 'tailwind-merge'
 
-type MainBtnProps = {
+interface MainBtnProps {
 	children: string
 	id?: string
 	className?: string

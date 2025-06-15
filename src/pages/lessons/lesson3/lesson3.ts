@@ -25,7 +25,7 @@ export function initThirdLesson(): void {
 		}).join('')
 	}
 
-	//* рендеримо зображення і получаємо елементи
+	//* рендеринг зображення і отримуємо елементи
 	imagesList!.innerHTML = renderImages(100)
 	imagesListElements = document.querySelectorAll('#imagesListElement')
 

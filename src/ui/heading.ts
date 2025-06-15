@@ -1,6 +1,6 @@
 import { twMerge } from 'tailwind-merge'
 
-type HeadingProps = {
+interface HeadingProps {
 	children: string
 	className?: string
 }

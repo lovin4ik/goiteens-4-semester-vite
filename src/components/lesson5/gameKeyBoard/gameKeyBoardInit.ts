@@ -30,9 +30,9 @@ export function gameKeyBoardInit() {
 		'betterTimer'
 	) as HTMLSpanElement
 
-	const { useLocalStorageGet, useLocalStorageSet } = useLocalStorage(
+	const { useLocalStorageGet, useLocalStorageSet } = useLocalStorage<number>(
 		'betterTime',
-		null
+		0
 	)
 	let betterTime: number = useLocalStorageGet() || 0
 
@@ -113,7 +113,7 @@ export function gameKeyBoardInit() {
 	}
 
 	function startGame() {
-		keys = shuffleArray(keysData)
+		keys = shuffleArray<string>(keysData)
 		currentKeyIndex = 0
 
 		keyText.textContent = `Натисніть на клавішу: "${keys[currentKeyIndex]}"`

@@ -56,7 +56,8 @@ export function initFirstLesson() {
 	}
 
 	imageGallery.addEventListener('click', (e: Event) => {
-		if ((e.target as HTMLElement).nodeName === 'IMG') return
+		const target = e.target as HTMLImageElement
+		if (target.nodeName !== 'IMG') return
 
 		lightbox.classList.add(IS_OPEN)
 		lightboxContent.innerHTML = FIRST_LESSON_IMAGES.map(image => {
@@ -66,15 +67,15 @@ export function initFirstLesson() {
 		lightboxImages = document.querySelectorAll('.lightbox__image')
 
 		slideWidth = lightboxImages[0].clientWidth + 30
-		console.log('slideWidth', slideWidth)
 
 		lightbox.addEventListener('click', (e: Event) => {
-			if ((e.target as HTMLElement).nodeName === 'IMG') return
+			const target = e.target as HTMLElement
+			if (target.nodeName === 'IMG') return
 			lightbox.classList.remove(IS_OPEN)
 		})
 
 		currentPosition = FIRST_LESSON_IMAGES.findIndex(image => {
-			return image.description === (e.target as HTMLImageElement).alt
+			return image.description === target.alt
 		})
 
 		moveSlide()
