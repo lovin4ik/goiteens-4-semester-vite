@@ -7,7 +7,7 @@ import { initThirdLesson } from './lesson3'
  * @returns {string}
  */
 
-export async function thirdLessonPage() {
+export function thirdLessonPage() {
 	requestAnimationFrame(() => {
 		initThirdLesson()
 	})

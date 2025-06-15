@@ -7,10 +7,11 @@ import { initFourthLesson } from './initFourthLesson'
  * @returns {string}
  */
 
-export async function fourthLessonPage() {
+export function fourthLessonPage() {
 	requestAnimationFrame(() => {
 		initFourthLesson()
 	})
+
 	return `
 		<div class="flex flex-col justify-center items-center h-full">
 			${heading({ children: 'lesson-4', className: 'text-center mb-4' })}

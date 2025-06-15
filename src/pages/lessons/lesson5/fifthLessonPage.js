@@ -11,10 +11,11 @@ import '@pnotify/mobile/dist/PNotifyMobile.css'
  *
  * @returns {Promise<string>}
  */
-export async function fifthLessonPage() {
+
+export function fifthLessonPage() {
 	return `
 		<div class="flex flex-col justify-center items-center">
-			${heading({ children: 'lesson-1', className: 'text-center mb-2' })}
+			${heading({ children: 'lesson-5', className: 'text-center mb-2' })}
 
 			${gameKeyBoard()}
 			

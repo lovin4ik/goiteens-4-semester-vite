@@ -1,5 +1,12 @@
 import { LINKS } from '@/config/links'
 
+import { homePage } from '@/pages/homePage'
+import { firstLessonPage } from '@/pages/lessons/lesson1/firstLessonPage'
+import { secondLessonPage } from '@/pages/lessons/lesson2/secondLessonPage'
+import { thirdLessonPage } from '@/pages/lessons/lesson3/thirdLessonPage'
+import { fourthLessonPage } from '@/pages/lessons/lesson4/fourthLessonPage'
+import { fifthLessonPage } from '@/pages/lessons/lesson5/fifthLessonPage'
+
 /**
  * @typedef {Object} Route
  * @property {string} path
@@ -12,44 +19,26 @@ import { LINKS } from '@/config/links'
 export const routes = [
 	{
 		path: `${LINKS.HOME}`,
-		component: async () => {
-			const res = await import('@/pages/homePage.js')
-			return res.homePage()
-		}
+		component: homePage
 	},
 	{
 		path: `${LINKS.LESSON}1/`,
-		component: async () => {
-			const res = await import('@/pages/lessons/lesson1/firstLessonPage.js')
-			return res.firstLessonPage()
-		}
+		component: firstLessonPage
 	},
 	{
 		path: `${LINKS.LESSON}2/`,
-		component: async () => {
-			const res = await import('@/pages/lessons/lesson2/secondLessonPage.js')
-			return res.secondLessonPage()
-		}
+		component: secondLessonPage
 	},
 	{
 		path: `${LINKS.LESSON}3/`,
-		component: async () => {
-			const res = await import('@/pages/lessons/lesson3/thirdLessonPage.js')
-			return res.thirdLessonPage()
-		}
+		component: thirdLessonPage
 	},
 	{
 		path: `${LINKS.LESSON}4/`,
-		component: async () => {
-			const res = await import('@/pages/lessons/lesson4/fourthLessonPage.js')
-			return res.fourthLessonPage()
-		}
+		component: fourthLessonPage
 	},
 	{
 		path: `${LINKS.LESSON}5/`,
-		component: async () => {
-			const res = await import('@/pages/lessons/lesson5/fifthLessonPage.js')
-			return res.fifthLessonPage()
-		}
+		component: fifthLessonPage
 	}
 ]
