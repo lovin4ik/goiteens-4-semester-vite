@@ -1,6 +1,10 @@
 import { PAGES } from '@/config/pages.config.js'
 
-import type { ILesson } from '@/shared/types/lesson.interface'
+export interface ILesson {
+	id: number
+	title: string
+	link: string
+}
 
 export const LESSONS: ILesson[] = [
 	{

@@ -1,4 +1,8 @@
-import type { firstLessonImgs } from '@/shared/types/firstLessonImgs.interface'
+export interface firstLessonImgs {
+	preview: string
+	original: string
+	description: string
+}
 
 export const FIRST_LESSON_IMAGES: firstLessonImgs[] = [
 	{

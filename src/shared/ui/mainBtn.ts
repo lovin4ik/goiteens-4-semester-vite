@@ -20,7 +20,7 @@ export function mainBtn({
 	return `
     <button
       class="${twMerge(`
-        bg-white text-black rounded-2xl py-2 px-4 transition-colors duration-300 ease-in-out hover:bg-white/80 font-medium cursor-pointer disabled:opacity-60 ${className}
+        bg-black text-white rounded-2xl py-2 px-4 transition-colors duration-300 ease-in-out hover:bg-black/80 font-medium cursor-pointer disabled:opacity-60 dark:bg-white dark:text-black dark:hover:bg-white/80 ${className}
       `)}"
       ${id ? `id="${id}"` : ''}
       ${attrsString}

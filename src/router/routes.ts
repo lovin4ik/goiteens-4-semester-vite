@@ -7,7 +7,11 @@ import { thirdLessonPage } from '@/pages/lessons/lesson3/thirdLessonPage'
 import { fourthLessonPage } from '@/pages/lessons/lesson4/fourthLessonPage'
 import { fifthLessonPage } from '@/pages/lessons/lesson5/fifthLessonPage'
 import { lessonSixPage } from '@/pages/lessons/lesson6/lessonSixPage'
-import type { IRoute } from '@/shared/types/route.interface'
+
+export interface IRoute {
+	path: string
+	component: () => Promise<string | HTMLElement> | string | HTMLElement
+}
 
 export const routes: IRoute[] = [
 	{

@@ -1,5 +1,4 @@
-import { FIRST_LESSON_IMAGES } from './lesson1-images'
-import type { firstLessonImgs } from '@/shared/types/firstLessonImgs.interface'
+import { FIRST_LESSON_IMAGES, type firstLessonImgs } from './lesson1-images'
 
 let lightboxImages: NodeListOf<HTMLImageElement>
 let slideWidth: number

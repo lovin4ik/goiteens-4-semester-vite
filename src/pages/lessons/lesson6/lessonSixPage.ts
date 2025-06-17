@@ -1,37 +1,12 @@
-import { codePreview } from '@/shared/ui/codePreview'
+import { heading } from '@/shared/ui/heading'
 
-const code = `
-export const lessonSixPage = async () => {
-	const div = document.createElement('div') as HTMLElement
-
-	div.className = ''
-
-	div.innerHTML = ''
-
-	div.appendChild(
-			await codePreview({
-			lang: 'ts',
-			code: code,
-			fileName: 'lessonSixPage'
-		})
-	)
-
-	return div
-}
-`
-
-export const lessonSixPage = async () => {
-	const div = document.createElement('div') as HTMLElement
-
-	div.className = ''
-
-	div.appendChild(
-		await codePreview({
-			lang: 'ts',
-			code: code,
-			fileName: 'lessonSixPage'
-		})
-	)
-
-	return div
+export function lessonSixPage() {
+	return `
+		<div class="">
+			${heading({
+				children: 'lesson-6',
+				className: 'text-center'
+			})}		
+		</div>
+	`
 }

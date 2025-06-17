@@ -46,7 +46,7 @@ function handleChangeTheme() {
 
 	useLocalStorageSet(newTheme)
 	applyTheme(newTheme)
-	changeTheme()
+	renderThemeBtn()
 }
 
 const moon = `<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-moon-icon lucide-moon"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"/></svg>`
@@ -62,18 +62,17 @@ function changeThemeBtn() {
 			children: icon,
 			id: 'changeTheme',
 			className:
-				'bg-transparent hover:bg-transparent text-white p-0 hover:text-primary'
+				'bg-transparent hover:bg-transparent text-black p-0 hover:text-primary dark:bg-transparent dark:text-white dark:hover:bg-transparent'
 		})}
 	`
 }
 
-export function changeTheme() {
-	requestAnimationFrame(() => {
-		const changeThemeBtn = document.querySelector('#changeTheme')
-
-		changeThemeBtn?.addEventListener('click', handleChangeTheme)
+export function renderThemeBtn() {
+	const container = document.getElementById('themeBtnContainer')
+	if (container) {
+		container.innerHTML = changeThemeBtn()
+		const btn = container.querySelector('#changeTheme')
+		btn?.addEventListener('click', handleChangeTheme)
 		applyTheme(useLocalStorageGet())
-	})
-
-	return changeThemeBtn()
+	}
 }

@@ -7,8 +7,8 @@
 
 @theme {
 	/** Colors **/
-	--color-primary: #b297dd;
-	--color-secondary: #181a1c;
+	--color-primary: #4b01ba;
+	--color-secondary: #b9b8f3;
 	--color-sidebar: #242424;
 
 	/** Fonts **/
@@ -29,12 +29,16 @@
 	--radius-lg: 20px;
 }
 
+.border-ios {
+	@apply shadow-[inset_0_0_0_1px_rgba(255,255,255,0.3),0_0_30px_rgba(255,255,255,0.15)] dark:shadow-[inset_0_0_0_1px_rgba(255,255,255,0.1)];
+}
+
 body {
 	@apply overflow-hidden;
 }
 
 #app {
-	@apply min-h-screen grid grid-cols-[324px_1fr] grid-rows-[74px_1fr] gap-0 bg-gradient-to-tr from-[#401e71] via-[#d76d77] to-[#fbab7b] font-poppins overflow-hidden text-white bg-white bg-no-repeat bg-cover bg-fixed dark:bg-black dark:bg-radial-[at_50%_90%] dark:from-[#8220cd]/55 dark:via-secondary dark:to-black;
+	@apply min-h-screen grid grid-cols-[324px_1fr] grid-rows-[74px_1fr] gap-0 bg-gradient-to-t from-[#c8d3d6] via-[#c8d3d6] to-[#fcfafa] font-poppins overflow-hidden text-black bg-[#fcfafa] bg-no-repeat bg-cover bg-fixed dark:bg-[#212131] dark:from-[#3a3249] dark:via-[#212131] dark:to-[#212131] dark:text-white;
 }
 
 .shiki {

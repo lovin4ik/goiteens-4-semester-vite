@@ -6,7 +6,7 @@ interface HeadingProps {
 }
 export function heading({ children, className }: HeadingProps): string {
 	return `
-		<h1 class="${twMerge(`text-2xl text-white font-bold ${className}`)}">
+		<h1 class="${twMerge(`text-2xl font-bold ${className}`)}">
 			${children}
 		</h1>
 	`
