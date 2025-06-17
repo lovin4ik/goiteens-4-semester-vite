@@ -25,13 +25,5 @@ export function useLocalStorage<T>(key: string, initialValue: T) {
 		notify()
 	}
 
-	function useLocalStorageSubscribe(callback: (value: any) => void) {
-		subscribers.push(callback)
-		callback(value)
-		return () => {
-			subscribers = subscribers.filter(fn => fn !== callback)
-		}
-	}
-
-	return { useLocalStorageGet, useLocalStorageSet, useLocalStorageSubscribe }
+	return { useLocalStorageGet, useLocalStorageSet }
 }

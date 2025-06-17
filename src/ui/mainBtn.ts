@@ -4,8 +4,9 @@ interface MainBtnProps {
 	children: string
 	id?: string
 	className?: string
-	attrs?: Record<string, string | boolean>
+	attrs?: Partial<Record<string, string | number | boolean | (() => void)>>
 }
+
 export function mainBtn({
 	children,
 	id = '',

@@ -2,6 +2,10 @@ import type { firstLessonImgs } from '@/types/firstLessonImgs.interface'
 
 import { FIRST_LESSON_IMAGES } from './lesson1-images'
 
+let lightboxImages: NodeListOf<HTMLImageElement>
+let slideWidth: number
+let currentPosition: number
+
 export function initFirstLesson() {
 	const imageGallery = document.querySelector('#imageGallery')
 	const lightbox = document.querySelector('#lightbox')
@@ -10,9 +14,6 @@ export function initFirstLesson() {
 	const IS_OPEN = 'is-open'
 	const arrowLeft = document.querySelector('.arrow-left')
 	const arrowRight = document.querySelector('.arrow-right')
-	let lightboxImages: NodeListOf<HTMLImageElement>
-	let slideWidth = 0
-	let currentPosition = 0
 
 	if (
 		!imageGallery ||
