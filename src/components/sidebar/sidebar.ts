@@ -1,9 +1,8 @@
-import { mainLink } from '@/ui/mainLink'
-
-import { LINKS } from '@/config/links'
+import { PAGES } from '@/config/pages.config'
 
 import { changeTheme } from './changeTheme/changeTheme'
 import { sidebarList } from './sidebarList/sidebarList'
+import { mainLink } from '@/shared/ui/mainLink'
 
 export function sidebar(): string {
 	return `
@@ -11,7 +10,7 @@ export function sidebar(): string {
 			<div class="flex flex-row justify-between items-center">
 				${mainLink({
 					children: 'Valera<span class="text-purple-900 font-bold">HW</span>',
-					link: LINKS.HOME,
+					link: PAGES.HOME,
 					className: 'text-xl ml-3'
 				})}
 

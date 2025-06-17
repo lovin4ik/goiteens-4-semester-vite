@@ -1,6 +1,6 @@
-import { mainBtn } from '@/ui/mainBtn'
-
 import { useLocalStorage } from '@/utils/useLocalStorage'
+
+import { mainBtn } from '@/shared/ui/mainBtn'
 
 const { useLocalStorageSet, useLocalStorageGet } = useLocalStorage<string>(
 	'currentTheme',

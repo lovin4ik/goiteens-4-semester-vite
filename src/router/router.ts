@@ -1,7 +1,6 @@
-import type { IRoute } from '@/types/route.interface'
-
 import { routes } from './routes'
 import { notFoundPage } from '@/pages/NotFound'
+import type { IRoute } from '@/shared/types/route.interface'
 
 type TView = () => Promise<string | HTMLElement> | string | HTMLElement
 

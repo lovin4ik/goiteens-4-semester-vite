@@ -1,7 +1,6 @@
-import { heading } from '@/ui/heading'
-import { mainBtn } from '@/ui/mainBtn'
-
 import { initFourthLesson } from './initFourthLesson'
+import { heading } from '@/shared/ui/heading'
+import { mainBtn } from '@/shared/ui/mainBtn'
 
 export function fourthLessonPage(): string {
 	requestAnimationFrame(() => {

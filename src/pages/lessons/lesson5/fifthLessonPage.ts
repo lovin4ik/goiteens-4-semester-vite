@@ -1,7 +1,7 @@
 import { chartTask } from '@/components/lesson5/chartTask/chartTask'
 import { gameKeyBoard } from '@/components/lesson5/gameKeyBoard/gameKeyBoard'
 
-import { heading } from '@/ui/heading'
+import { heading } from '@/shared/ui/heading'
 
 import '@pnotify/core/dist/BrightTheme.css'
 import '@pnotify/core/dist/PNotify.css'

@@ -1,6 +1,6 @@
-import { mainLink } from '@/ui/mainLink'
+import { PAGES } from '@/config/pages.config'
 
-import { LINKS } from '@/config/links'
+import { mainLink } from '@/shared/ui/mainLink'
 
 export function notFoundPage(): string {
 	return `
@@ -9,7 +9,7 @@ export function notFoundPage(): string {
 
 			${mainLink({
 				children: 'Go to home',
-				link: LINKS.HOME,
+				link: PAGES.HOME,
 				className: 'underline'
 			})}
 		</div>

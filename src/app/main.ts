@@ -7,7 +7,7 @@ document.querySelector<HTMLDivElement>('#app')!.innerHTML = `
 	${sidebar()}
 
 	<main 
-		class="col-start-2 col-end-3 row-start-1 row-end-3 pt-2 h-full overflow-auto max-h-screen"
+		class="col-start-2 col-end-3 row-start-1 row-end-3 pt-2 h-full overflow-auto max-h-screen px-2"
 		id="layout"
 	></main>
 `

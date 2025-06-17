@@ -1,10 +1,9 @@
 import { twMerge } from 'tailwind-merge'
 
-import { mainLink } from '@/ui/mainLink'
-
-import type { ILesson } from '@/types/lesson.interface'
-
 import { LESSONS } from '../sidebar.data'
+
+import type { ILesson } from '@/shared/types/lesson.interface'
+import { mainLink } from '@/shared/ui/mainLink'
 
 export function sidebarList(): string {
 	return `

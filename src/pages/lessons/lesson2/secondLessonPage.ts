@@ -1,6 +1,5 @@
-import { heading } from '@/ui/heading'
-
 import { initSecondLesson } from './lesson2'
+import { heading } from '@/shared/ui/heading'
 
 export function secondLessonPage(): string {
 	requestAnimationFrame(() => {

@@ -1,6 +1,5 @@
-import { mainBtn } from '@/ui/mainBtn'
-
 import { gameKeyBoardInit } from './gameKeyBoardInit'
+import { mainBtn } from '@/shared/ui/mainBtn'
 
 export function gameKeyBoard(): string {
 	requestAnimationFrame(() => {
