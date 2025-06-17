@@ -1,4 +1,4 @@
-import type { IFifthChartData } from '@/types/fifthChartData.type'
+import type { IFifthChartData } from '@/types/fifthChartData.interface'
 
 export const fifthChartData: IFifthChartData = {
 	labels: [

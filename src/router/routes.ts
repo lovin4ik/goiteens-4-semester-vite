@@ -1,4 +1,4 @@
-import type { IRoute } from '@/types/route.type'
+import type { IRoute } from '@/types/route.interface'
 
 import { LINKS } from '@/config/links'
 

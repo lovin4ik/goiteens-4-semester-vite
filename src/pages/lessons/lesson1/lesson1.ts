@@ -1,4 +1,4 @@
-import type { firstLessonImgs } from '@/types/firstLessonImgs.type'
+import type { firstLessonImgs } from '@/types/firstLessonImgs.interface'
 
 import { FIRST_LESSON_IMAGES } from './lesson1-images'
 

@@ -1,4 +1,4 @@
-import type { ILesson } from '@/types/lesson.type'
+import type { ILesson } from '@/types/lesson.interface'
 
 import { LINKS } from '@/config/links.js'
 

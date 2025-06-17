@@ -2,7 +2,7 @@ import { twMerge } from 'tailwind-merge'
 
 import { mainLink } from '@/ui/mainLink'
 
-import type { ILesson } from '@/types/lesson.type'
+import type { ILesson } from '@/types/lesson.interface'
 
 import { LESSONS } from '../sidebar.data'
 

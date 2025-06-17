@@ -1,4 +1,4 @@
-import type { firstLessonImgs } from '@/types/firstLessonImgs.type'
+import type { firstLessonImgs } from '@/types/firstLessonImgs.interface'
 
 export const FIRST_LESSON_IMAGES: firstLessonImgs[] = [
 	{
