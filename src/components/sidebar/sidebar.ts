@@ -11,7 +11,8 @@ export function sidebar(): string {
 				${mainLink({
 					children: 'Valera<span class="text-secondary font-bold">HW</span>',
 					link: PAGES.HOME,
-					className: 'text-xl ml-3 hover:text-black dark:hover:text-white'
+					className:
+						'text-xl ml-3 transition-none hover:text-black dark:hover:text-white'
 				})}
 
 				<span class="w-[24px] h-[24px]" id="themeBtnContainer">

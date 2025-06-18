@@ -23,27 +23,27 @@ Chart.register(
 	Legend
 )
 
+let chart: Chart
+
 export function chartTaskInit() {
-	const chartCanvas = document.getElementById(
-		'salesChart'
-	) as HTMLCanvasElement | null
-	const ctx = chartCanvas?.getContext('2d') as CanvasRenderingContext2D | null
+	const chartCanvas = document.getElementById('salesChart') as HTMLCanvasElement
+	const ctx = chartCanvas?.getContext('2d') as CanvasRenderingContext2D
 
 	if (!ctx) {
 		console.error('Canvas context is not available.')
 		return
 	}
 
-	new Chart(ctx, {
+	chart = new Chart(ctx, {
 		type: 'line',
 		data: fifthChartData,
 		options: {
-			responsive: true,
+			responsive: false,
 			plugins: {
 				legend: {
 					position: 'top',
 					labels: {
-						color: '#ffffff'
+						color: getChartTextColor()
 					}
 				}
 			},
@@ -51,15 +51,30 @@ export function chartTaskInit() {
 				y: {
 					beginAtZero: true,
 					ticks: {
-						color: '#ffffff'
+						color: getChartTextColor()
 					}
 				},
 				x: {
 					ticks: {
-						color: '#ffffff'
+						color: getChartTextColor()
 					}
 				}
 			}
 		}
 	})
+}
+
+function getChartTextColor() {
+	return document.documentElement.classList.contains('dark')
+		? '#ffffff'
+		: '#000000'
+}
+
+export function changeChartColor() {
+	if (!chart) return
+	const color = getChartTextColor()
+	chart.options.plugins!.legend!.labels!.color = color
+	chart.options.scales!.x!.ticks!.color = color
+	chart.options.scales!.y!.ticks!.color = color
+	chart.update()
 }

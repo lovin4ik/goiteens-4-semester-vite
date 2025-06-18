@@ -1,14 +1,18 @@
+import { useSetTitle } from '@/utils/useSetTitle'
+
 import { initFirstLesson } from './lesson1'
 import './lesson1.css'
 import { heading } from '@/shared/ui/heading'
 
 export function firstLessonPage(): string {
+	useSetTitle('lesson 1')
+
 	requestAnimationFrame(() => {
 		initFirstLesson()
 	})
 
 	return `
-		<div class="container mx-auto min-h-screen flex items-center justify-center py-8 flex-col px-2"> 
+		<div class="min-h-full flex items-center justify-center flex-col"> 
 			${heading({ children: 'lesson-1', className: 'text-center mb-4' })}
 
 			<ul 

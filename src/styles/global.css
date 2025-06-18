@@ -29,6 +29,14 @@
 	--radius-lg: 20px;
 }
 
+html {
+	@apply scroll-smooth;
+}
+
+button {
+	@apply cursor-pointer;
+}
+
 .border-ios {
 	@apply shadow-[inset_0_0_0_1px_rgba(255,255,255,0.3),0_0_30px_rgba(255,255,255,0.15)] dark:shadow-[inset_0_0_0_1px_rgba(255,255,255,0.1)];
 }
@@ -38,7 +46,7 @@ body {
 }
 
 #app {
-	@apply min-h-screen grid grid-cols-[324px_1fr] grid-rows-[74px_1fr] gap-0 bg-gradient-to-t from-[#c8d3d6] via-[#c8d3d6] to-[#fcfafa] font-poppins overflow-hidden text-black bg-[#fcfafa] bg-no-repeat bg-cover bg-fixed dark:bg-[#212131] dark:from-[#3a3249] dark:via-[#212131] dark:to-[#212131] dark:text-white;
+	@apply min-h-screen grid grid-cols-[324px_1fr] grid-rows-[74px_1fr] gap-0 bg-gradient-to-t from-[#c8d3d6] via-[#c8d3d6] to-[#fcfafa] font-poppins overflow-hidden text-black bg-[#fcfafa] bg-no-repeat bg-cover bg-fixed dark:bg-[#212131] dark:from-[#1d1e24] dark:via-[#212131] dark:to-[#212131] dark:text-white;
 }
 
 .shiki {

@@ -1,13 +1,17 @@
+import { useSetTitle } from '@/utils/useSetTitle'
+
 import { initSecondLesson } from './lesson2'
 import { heading } from '@/shared/ui/heading'
 
 export function secondLessonPage(): string {
+	useSetTitle('lesson 2')
+
 	requestAnimationFrame(() => {
 		initSecondLesson()
 	})
 
 	return `
-		<div class="flex flex-col justify-center items-center h-full">
+		<div class="flex flex-col justify-center items-center min-h-full">
 			${heading({ children: 'lesson-2', className: 'text-center mb-4' })}
 			
 			<div class="slider mx-auto w-[400px] mt-4 h-[270px]">

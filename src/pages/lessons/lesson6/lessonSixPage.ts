@@ -1,6 +1,9 @@
+import { useSetTitle } from '@/utils/useSetTitle'
+
 import { heading } from '@/shared/ui/heading'
 
 export function lessonSixPage() {
+	useSetTitle('lesson 6')
 	return `
 		<div class="">
 			${heading({

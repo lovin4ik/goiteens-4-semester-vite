@@ -1,6 +1,4 @@
 export function useLocalStorage<T>(key: string, initialValue: T) {
-	let subscribers: Array<(value: T) => void> = []
-
 	let stored = localStorage.getItem(key)
 	let value: T
 
@@ -11,10 +9,6 @@ export function useLocalStorage<T>(key: string, initialValue: T) {
 		localStorage.setItem(key, JSON.stringify(initialValue))
 	}
 
-	function notify() {
-		subscribers.forEach(fn => fn(value))
-	}
-
 	function useLocalStorageGet() {
 		return value
 	}
@@ -22,7 +16,6 @@ export function useLocalStorage<T>(key: string, initialValue: T) {
 	function useLocalStorageSet(newValue: any) {
 		value = newValue
 		localStorage.setItem(key, JSON.stringify(newValue))
-		notify()
 	}
 
 	return { useLocalStorageGet, useLocalStorageSet }
