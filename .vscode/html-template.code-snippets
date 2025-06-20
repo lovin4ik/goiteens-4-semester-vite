@@ -1,0 +1,11 @@
+{
+	"template": {
+		"prefix": "efc",
+		"body": [
+			"export function ${TM_FILENAME_BASE}() {",
+			"  return `<div>${TM_FILENAME_BASE}</div>`",
+			"}"
+		],
+		"description": "template"
+	}
+}
