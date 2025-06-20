@@ -20,8 +20,8 @@ export async function codePreview({ lang = 'js', className, code }: Props) {
 	})
 
 	div.innerHTML = `
-		<div class="absolute top-0 left-0 right-0 flex flex-row items-center justify-between px-4 py-2">
-			<span class="text-sm text-white/60 absolute right-2 top-2">${lang}</span>
+		<div class="w-full flex flex-row items-center justify-between px-2 py-1 bg-[#1f1f28]">
+			<span class="text-sm text-white/60 text-right w-full">${lang}</span>
 		</div>
 		${htmlCode}
 	`
