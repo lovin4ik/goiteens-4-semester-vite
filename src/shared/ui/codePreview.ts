@@ -15,12 +15,12 @@ export async function codePreview({ lang = 'js', className, code }: Props) {
 	)
 
 	const htmlCode = await codeToHtml(code, {
-		lang: lang,
+		lang: lang === 'hbs' ? 'html' : lang,
 		theme: 'kanagawa-wave'
 	})
 
 	div.innerHTML = `
-		<div class="w-full flex flex-row items-center justify-between px-2 py-1 bg-[#1f1f28]">
+		<div class="absolute top-0 left-0 right-0 flex flex-row items-center justify-between px-2 py-1 bg-[#1f1f28]">
 			<span class="text-sm text-white/60 text-right w-full">${lang}</span>
 		</div>
 		${htmlCode}
