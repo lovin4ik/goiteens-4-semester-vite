@@ -43,68 +43,68 @@ export const LESSONS: ILesson[] = [
 		link: `${PAGES.LESSON}7/`
 	},
 	{
-		id: 9,
+		id: 8,
 		title: 'Формат даних JSON',
+		link: `${PAGES.LESSON}8/`
+	},
+	{
+		id: 9,
+		title: 'Веб-сховище',
 		link: `${PAGES.LESSON}9/`
 	},
 	{
 		id: 10,
-		title: 'Веб-сховище',
+		title: 'Асинхронність',
 		link: `${PAGES.LESSON}10/`
 	},
 	{
 		id: 11,
-		title: 'Асинхронність',
+		title: 'Таймери',
 		link: `${PAGES.LESSON}11/`
 	},
 	{
 		id: 12,
-		title: 'Таймери',
+		title: 'Дата та час',
 		link: `${PAGES.LESSON}12/`
 	},
 	{
 		id: 13,
-		title: 'Дата та час',
+		title: 'Проміси',
 		link: `${PAGES.LESSON}13/`
 	},
 	{
 		id: 14,
-		title: 'Проміси',
+		title: 'Методи класу Promise. Цикл подій',
 		link: `${PAGES.LESSON}14/`
 	},
 	{
 		id: 15,
-		title: 'Методи класу Promise. Цикл подій',
+		title: 'HTTP запити 1. REST API',
 		link: `${PAGES.LESSON}15/`
 	},
 	{
+		id: 16,
+		title: 'HTTP-запити 2. AJAX',
+		link: `${PAGES.LESSON}16/`
+	},
+	{
 		id: 17,
-		title: 'HTTP запити 1. REST API',
+		title: 'Пагінація',
 		link: `${PAGES.LESSON}17/`
 	},
 	{
 		id: 18,
-		title: 'HTTP-запити 2. AJAX',
+		title: 'CRUD взаємодії з ресурсами бекенду',
 		link: `${PAGES.LESSON}18/`
 	},
 	{
 		id: 19,
-		title: 'Пагінація',
+		title: 'Асинхронні функції async/await',
 		link: `${PAGES.LESSON}19/`
 	},
 	{
 		id: 20,
-		title: 'CRUD взаємодії з ресурсами бекенду',
-		link: `${PAGES.LESSON}20/`
-	},
-	{
-		id: 21,
-		title: 'Асинхронні функції async/await',
-		link: `${PAGES.LESSON}21/`
-	},
-	{
-		id: 22,
 		title: 'Міні-проєкт: асинхронні функції async/await',
-		link: `${PAGES.LESSON}22/`
+		link: `${PAGES.LESSON}20/`
 	}
 ]

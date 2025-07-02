@@ -1,4 +1,4 @@
-export function useLocalStorage<T>(key: string, initialValue: T) {
+export function useLocalStorage<T>(key: string, initialValue: T | any) {
 	let stored = localStorage.getItem(key)
 	let value: T
 
