@@ -26,7 +26,7 @@ export async function lessonSeventhPage() {
 			lang: 'hbs',
 			code: `
 <div
-	class='border-ios flex flex-col gap-0.5
+	class='shadow-ios flex flex-col gap-0.5
 	px-4 py-2 rounded-md max-w-[300px] 
 	bg-white/30 backdrop-blur-3xl
 	dark:bg-sidebar/10'

@@ -65,7 +65,7 @@ function changeThemeBtn() {
 			children: icon,
 			id: 'changeTheme',
 			className:
-				'bg-transparent hover:bg-transparent text-black p-0 hover:text-primary dark:bg-transparent dark:text-white dark:hover:bg-transparent'
+				'bg-transparent hover:bg-transparent text-black p-0 hover:text-primary dark:bg-transparent dark:text-white dark:hover:bg-transparent shadow-none'
 		})}
 	`
 }
