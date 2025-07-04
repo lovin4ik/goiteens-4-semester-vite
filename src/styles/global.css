@@ -12,6 +12,7 @@
 	--color-primary: #4b01ba;
 	--color-secondary: #b9b8f3;
 	--color-sidebar: #242424;
+	--color-bg: #c8d3d6;
 
 	/** Fonts **/
 	--font-jetBrainsMono: 'JetBrains Mono', monospace;
@@ -51,11 +52,11 @@ body {
 }
 
 #app {
-	@apply min-h-screen transition-colors grid grid-cols-[324px_1fr] grid-rows-[74px_1fr] gap-0 bg-gradient-to-t from-[#c8d3d6] via-[#c8d3d6] to-[#fcfafa] font-poppins overflow-hidden text-black bg-[#fcfafa] bg-no-repeat bg-cover bg-fixed dark:bg-[#212131] dark:from-[#1d1e24] dark:via-[#212131] dark:to-[#212131] dark:text-white;
+	@apply font-poppins grid min-h-screen grid-cols-[324px_1fr] grid-rows-[74px_1fr] gap-0 overflow-hidden bg-[#fcfafa] bg-gradient-to-t from-[#c8d3d6] via-[#c8d3d6] to-[#fcfafa] bg-cover bg-fixed bg-no-repeat text-black transition-colors dark:bg-[#212131] dark:from-[#1d1e24] dark:via-[#212131] dark:to-[#212131] dark:text-white;
 }
 
 .shiki {
-	@apply p-2 pt-1 overflow-auto w-full h-full max-w-full max-h-full font-jetBrainsMono text-sm;
+	@apply font-jetBrainsMono h-full max-h-full w-full max-w-full overflow-auto p-2 pt-1 text-sm;
 }
 
 .shiki > * {

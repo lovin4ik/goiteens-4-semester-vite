@@ -19,6 +19,8 @@
 		"add": "^2.0.6",
 		"eslint": "^9.28.0",
 		"globals": "^16.2.0",
+		"prettier": "^3.6.2",
+		"prettier-plugin-tailwindcss": "^0.6.13",
 		"shiki": "^3.6.0",
 		"tailwind-scrollbar": "^4.0.2",
 		"typescript": "^5.8.3",
@@ -33,7 +35,7 @@
 		"gh-pages": "^6.3.0",
 		"handlebars": "^4.7.8",
 		"lodash": "^4.17.21",
-		"tailwind-merge": "^3.3.0",
+		"tailwind-merge": "^3.3.1",
 		"tailwindcss": "^4.1.8"
 	}
 }

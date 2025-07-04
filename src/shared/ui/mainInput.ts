@@ -28,7 +28,7 @@ export function mainInput({
 			type="${type}" 
 			placeholder="${placeholder}" 
 			name="${name ? name : id ? id : ''}"
-			class="${twMerge(`text-black placeholder:text-black/80 dark:text-white dark:placeholder:text-white/80 text-md outline-none px-2 py-2.5 shadow-ios bg-white/10 backdrop-blur-[5px] block rounded-md focus:bg-white/15 transition-colors ${className}`)}" 
+			class="${twMerge(`text-black placeholder:text-black/80 dark:text-white dark:placeholder:text-white/80 text-md outline-none px-2 py-2.5 shadow-ios bg-bg/10 backdrop-blur-[5px] block rounded-md focus:bg-bg/15 transition-colors ${className}`)}" 
 			${id ? `id="${id}"` : ''} 
 			${attrsString}
 			${require ? 'required' : ''}

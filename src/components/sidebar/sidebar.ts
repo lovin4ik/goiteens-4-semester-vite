@@ -6,7 +6,7 @@ import { mainLink } from '@/shared/ui/mainLink'
 
 export function sidebar(): string {
 	return `
-		<aside class="col-start-1 col-end-2 row-start-1 row-end-3 bg-white/5 shadow-ios backdrop-blur-[5px] p-4 rounded-[0_12px_12px_0] my-2 max-h-[calc(100vh-16px)] overflow-hidden scrollbar-none" id="sidebar">
+		<aside class="col-start-1 col-end-2 row-start-1 row-end-3 bg-bg/5 shadow-ios backdrop-blur-[5px] p-4 rounded-[0_12px_12px_0] my-2 max-h-[calc(100vh-16px)] overflow-hidden scrollbar-none" id="sidebar">
 			<div class="flex flex-row justify-between items-center scrollbar-none">
 				${mainLink({
 					children: 'Valera<span class="text-secondary font-bold">HW</span>',

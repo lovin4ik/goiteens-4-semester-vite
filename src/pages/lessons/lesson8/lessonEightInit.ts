@@ -1,10 +1,16 @@
 import Handlebars from 'handlebars'
 
+import { modalTemplate } from '@/components/modal/modal'
+
 import { useLocalStorage } from '@/utils/useLocalStorage'
+import { useModal } from '@/utils/useModal'
 
+import { formHtml } from './form/formHtml'
+import { verifyFormData } from './form/verifyFormData'
 import templateStudent from './template-student-data.hbs?raw'
+import { mainBtn } from '@/shared/ui/mainBtn'
 
-interface IStudent {
+export interface IStudent {
 	firstName: string
 	lastName: string
 	age: number
@@ -26,7 +32,6 @@ export function lessonEightInit() {
 	const studentsArray: IStudent[] = useLocalStorageGet()
 
 	function addStudent(newStudent: IStudent) {
-		console.log(newStudent)
 		studentsArray.push(newStudent)
 		useLocalStorageSet(studentsArray)
 		renderStudentsList()
@@ -38,8 +43,24 @@ export function lessonEightInit() {
 			return
 		}
 
-		console.log(index)
 		studentsArray.splice(index, 1)
+		useLocalStorageSet(studentsArray)
+		renderStudentsList()
+	}
+
+	function updateStudent(index: number, data: IStudent) {
+		if (index < 0 || index >= studentsArray.length) {
+			console.log('Некоректний індекс для оновлення студента')
+			return
+		}
+
+		studentsArray[index] = {
+			firstName: data.firstName,
+			lastName: data.lastName,
+			age: data.age,
+			course: data.course,
+			faculty: data.faculty
+		}
 		useLocalStorageSet(studentsArray)
 		renderStudentsList()
 	}
@@ -58,20 +79,135 @@ export function lessonEightInit() {
 						.join('')
 		}
 		`
-		const studentBtnDelete = document.querySelectorAll('#studentBtnDelete')
+		const studentsContextMenu = document.querySelectorAll('.studentContextMenu')
 
-		if (!studentBtnDelete) return
-
-		studentBtnDelete.forEach(btn => {
+		studentsContextMenu.forEach(btn => {
 			btn.addEventListener('click', e => {
-				const target = e.currentTarget as HTMLElement
-				const indexStr = target.dataset.index
-				if (indexStr !== undefined) {
-					const index = parseInt(indexStr)
-					if (!isNaN(index)) {
-						deleteStudent(index)
-					}
-				}
+				e.stopPropagation()
+				const index = (btn as HTMLElement).dataset.index
+				const menu = document.querySelector(
+					`.studentContextMenuList[data-index="${index}"]`
+				)
+				if (!menu) return
+
+				document.querySelectorAll('.studentContextMenuList').forEach(m => {
+					if (m !== menu) m.classList.add('hidden')
+				})
+
+				menu.classList.toggle('hidden')
+
+				const app = document.querySelector('#app')
+				if (!app) return
+
+				const deleteBtn = document.querySelector(
+					`.studentBtnDelete[data-index="${index}"]`
+				)
+
+				if (!deleteBtn) return
+
+				deleteBtn.addEventListener('click', e => {
+					const currentTarget = e.currentTarget as HTMLElement
+					const indexStr = currentTarget.dataset.index
+
+					const modal = modalTemplate(`
+						<div class="text-center flex flex-col items-center justify-center">
+							<p class="mb-4">Ви впевнені, що хочете видалити студента?</p>
+							${mainBtn({
+								children: 'Так',
+								id: 'confirmDelete',
+								className: 'w-[100px] mb-2'
+							})}
+							${mainBtn({
+								children: 'Ні',
+								id: 'cancelDelete',
+								className: 'w-[100px]'
+							})}
+						</div>
+					`)
+
+					app.appendChild(modal)
+
+					const { openModal, closeModal } = useModal()
+					openModal()
+
+					modal
+						.querySelector('#confirmDelete')
+						?.addEventListener('click', () => {
+							if (indexStr !== undefined) {
+								const index = parseInt(indexStr)
+								if (!isNaN(index)) {
+									deleteStudent(index)
+									closeModal()
+									modal.remove()
+								}
+							}
+						})
+
+					modal
+						.querySelector('#cancelDelete')
+						?.addEventListener('click', () => {
+							closeModal()
+							modal.remove()
+						})
+				})
+
+				const editBtn = document.querySelector(
+					`.studentBtnEdit[data-index="${index}"]`
+				)
+
+				if (!editBtn) return
+
+				editBtn.addEventListener('click', () => {
+					const modal = modalTemplate(
+						`${formHtml({
+							id: 'modalStudentForm',
+							isRequired: false
+						})}`
+					)
+
+					app.appendChild(modal)
+
+					const { openModal, closeModal } = useModal()
+					openModal()
+
+					if (typeof index == 'undefined') return
+
+					const parsedIndex = parseInt(index)
+					if (isNaN(parsedIndex)) return
+					const student = studentsArray[parsedIndex]
+
+					const form = modal.querySelector<HTMLFormElement>('#modalStudentForm')
+
+					if (!form) return
+
+					const fields: (keyof IStudent)[] = [
+						'firstName',
+						'lastName',
+						'age',
+						'course',
+						'faculty'
+					]
+
+					fields.forEach(field => {
+						const input = form.elements.namedItem(
+							field
+						) as HTMLInputElement | null
+						if (input) {
+							// Якщо поле числове, приводимо до рядка
+							const value = student[field]
+							input.value = typeof value === 'number' ? value.toString() : value
+						}
+					})
+					form.addEventListener('submit', e => {
+						e.preventDefault()
+
+						const newStudent = verifyFormData({ e })
+						if (!newStudent) return
+
+						updateStudent(parsedIndex, newStudent)
+						closeModal()
+					})
+				})
 			})
 		})
 	}
@@ -79,56 +215,10 @@ export function lessonEightInit() {
 	studentForm?.addEventListener('submit', e => {
 		e.preventDefault()
 
-		const target = e.target as HTMLFormElement
+		const newStudent = verifyFormData({ e })
 
-		const firstName = (
-			target.querySelector('#firstName') as HTMLInputElement
-		).value.trim()
-		const lastName = (
-			target.querySelector('#lastName') as HTMLInputElement
-		).value.trim()
-		const ageStr = (
-			target.querySelector('#age') as HTMLInputElement
-		).value.trim()
-		const courseStr = (
-			target.querySelector('#course') as HTMLInputElement
-		).value.trim()
+		if (!newStudent) return
 
-		const age = Number(ageStr)
-		const course = Number(courseStr)
-		const faculty = (
-			target.querySelector('#faculty') as HTMLInputElement
-		).value.trim()
-
-		if (isNaN(age)) {
-			console.log('age is not a string type')
-			return
-		}
-
-		if (isNaN(course)) {
-			console.log('course is not a string type')
-			return
-		}
-
-		if (firstName.length < 2) {
-			console.log('first name is must be more than 2 characters')
-			return
-		}
-
-		if (lastName.length < 2) {
-			console.log('last name is must be more than 3 characters')
-			return
-		}
-
-		if (age < 0) {
-			console.log('age cannot be less than 0')
-		}
-
-		if (course < 0) {
-			console.log('course cannot be less than 0')
-		}
-
-		const newStudent: IStudent = { firstName, lastName, age, course, faculty }
 		addStudent(newStudent)
 	})
 
