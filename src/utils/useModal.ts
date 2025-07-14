@@ -24,7 +24,6 @@ export const useModal = () => {
 		modal.classList.remove('active')
 
 		backdrop.remove()
-
 		window.removeEventListener('keydown', handleEsc)
 	}
 

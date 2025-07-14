@@ -5,7 +5,7 @@
 	"type": "module",
 	"homepage": "https://lovin4ik.github.io/goiteens-4-semester-vite",
 	"scripts": {
-		"dev": "vite",
+		"dev": "vite --port 3000",
 		"build": "tsc && vite build --base=/goiteens-4-semester-vite/",
 		"preview": "vite preview",
 		"predeploy": "vite build",

@@ -66,6 +66,8 @@ export function lessonEightInit() {
 	}
 
 	function renderStudentsList() {
+		console.log('renderStudentsList')
+
 		if (!studentList) return
 
 		studentList.innerHTML = `
@@ -105,11 +107,13 @@ export function lessonEightInit() {
 
 				if (!deleteBtn) return
 
-				deleteBtn.addEventListener('click', e => {
-					const currentTarget = e.currentTarget as HTMLElement
-					const indexStr = currentTarget.dataset.index
+				deleteBtn.addEventListener(
+					'click',
+					e => {
+						const currentTarget = e.currentTarget as HTMLElement
+						const indexStr = currentTarget.dataset.index
 
-					const modal = modalTemplate(`
+						const modal = modalTemplate(`
 						<div class="text-center flex flex-col items-center justify-center">
 							<p class="mb-4">Ви впевнені, що хочете видалити студента?</p>
 							${mainBtn({
@@ -125,31 +129,33 @@ export function lessonEightInit() {
 						</div>
 					`)
 
-					app.appendChild(modal)
+						app.appendChild(modal)
 
-					const { openModal, closeModal } = useModal()
-					openModal()
+						const { openModal, closeModal } = useModal()
+						openModal()
 
-					modal
-						.querySelector('#confirmDelete')
-						?.addEventListener('click', () => {
-							if (indexStr !== undefined) {
-								const index = parseInt(indexStr)
-								if (!isNaN(index)) {
-									deleteStudent(index)
-									closeModal()
-									modal.remove()
+						modal
+							.querySelector('#confirmDelete')
+							?.addEventListener('click', () => {
+								if (indexStr !== undefined) {
+									const index = parseInt(indexStr)
+									if (!isNaN(index)) {
+										deleteStudent(index)
+										closeModal()
+										modal.remove()
+									}
 								}
-							}
-						})
+							})
 
-					modal
-						.querySelector('#cancelDelete')
-						?.addEventListener('click', () => {
-							closeModal()
-							modal.remove()
-						})
-				})
+						modal
+							.querySelector('#cancelDelete')
+							?.addEventListener('click', () => {
+								closeModal()
+								modal.remove()
+							})
+					},
+					{ once: true }
+				)
 
 				const editBtn = document.querySelector(
 					`.studentBtnEdit[data-index="${index}"]`
@@ -157,57 +163,62 @@ export function lessonEightInit() {
 
 				if (!editBtn) return
 
-				editBtn.addEventListener('click', () => {
-					const modal = modalTemplate(
-						`${formHtml({
-							id: 'modalStudentForm',
-							isRequired: false
-						})}`
-					)
+				editBtn.addEventListener(
+					'click',
+					() => {
+						const modal = modalTemplate(
+							`${formHtml({
+								id: 'modalStudentForm',
+								isRequired: false
+							})}`
+						)
 
-					app.appendChild(modal)
+						app.appendChild(modal)
 
-					const { openModal, closeModal } = useModal()
-					openModal()
+						const { openModal, closeModal } = useModal()
+						openModal()
 
-					if (typeof index == 'undefined') return
+						if (typeof index == 'undefined') return
 
-					const parsedIndex = parseInt(index)
-					if (isNaN(parsedIndex)) return
-					const student = studentsArray[parsedIndex]
+						const parsedIndex = parseInt(index)
+						if (isNaN(parsedIndex)) return
+						const student = studentsArray[parsedIndex]
 
-					const form = modal.querySelector<HTMLFormElement>('#modalStudentForm')
+						const form =
+							modal.querySelector<HTMLFormElement>('#modalStudentForm')
 
-					if (!form) return
+						if (!form) return
 
-					const fields: (keyof IStudent)[] = [
-						'firstName',
-						'lastName',
-						'age',
-						'course',
-						'faculty'
-					]
+						const fields: (keyof IStudent)[] = [
+							'firstName',
+							'lastName',
+							'age',
+							'course',
+							'faculty'
+						]
 
-					fields.forEach(field => {
-						const input = form.elements.namedItem(
-							field
-						) as HTMLInputElement | null
-						if (input) {
-							// Якщо поле числове, приводимо до рядка
-							const value = student[field]
-							input.value = typeof value === 'number' ? value.toString() : value
-						}
-					})
-					form.addEventListener('submit', e => {
-						e.preventDefault()
+						fields.forEach(field => {
+							const input = form.elements.namedItem(
+								field
+							) as HTMLInputElement | null
+							if (input) {
+								const value = student[field]
+								input.value =
+									typeof value === 'number' ? value.toString() : value
+							}
+						})
+						form.addEventListener('submit', e => {
+							e.preventDefault()
 
-						const newStudent = verifyFormData({ e })
-						if (!newStudent) return
+							const newStudent = verifyFormData({ e })
+							if (!newStudent) return
 
-						updateStudent(parsedIndex, newStudent)
-						closeModal()
-					})
-				})
+							updateStudent(parsedIndex, newStudent)
+							closeModal()
+						})
+					},
+					{ once: true }
+				)
 			})
 		})
 	}

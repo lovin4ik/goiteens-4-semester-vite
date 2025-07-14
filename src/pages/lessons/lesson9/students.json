@@ -1,0 +1,42 @@
+[
+	{
+		"id": 1,
+		"firstName": "Ім'я-1",
+		"lastName": "Прізвище-1",
+		"age": 11,
+		"course": "Курс-1",
+		"faculty": "Факультет-1"
+	},
+	{
+		"id": 2,
+		"firstName": "Ім'я-2",
+		"lastName": "Прізвище-2",
+		"age": 12,
+		"course": "Курс-2",
+		"faculty": "Факультет-2"
+	},
+	{
+		"id": 3,
+		"firstName": "Ім'я-3",
+		"lastName": "Прізвище-3",
+		"age": 13,
+		"course": "Курс-3",
+		"faculty": "Факультет-3"
+	},
+	{
+		"id": 4,
+		"firstName": "Ім'я-4",
+		"lastName": "Прізвище-4",
+		"age": 14,
+		"course": "Курс-4",
+		"faculty": "Факультет-4"
+	},
+	{
+		"id": 5,
+		"firstName": "Ім'я-5",
+		"lastName": "Прізвище-5",
+		"age": 15,
+		"course": "Курс-5",
+		"faculty": "Факультет-5"
+	}
+]
