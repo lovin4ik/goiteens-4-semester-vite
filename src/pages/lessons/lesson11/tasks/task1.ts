@@ -27,7 +27,6 @@ export function task1() {
 				timerMessage.textContent = 'Час вийшов!'
 				if (intervalId) {
 					clearInterval(intervalId)
-					intervalId = null
 					timerShow.textContent = '1:00'
 					startTimerBtn.disabled = false
 				}
