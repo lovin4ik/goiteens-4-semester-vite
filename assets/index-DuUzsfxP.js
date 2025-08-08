@@ -644,7 +644,7 @@ Expecting `+q.join(", ")+", got '"+(this.terminals_[I]||I)+"'":K="Parse error on
 
 			<h2 class="text-lg font-bold mt-4">Завдання 2</h2>
 			
-			<div class="mt-2 rounded-full block border-8 border-solid border-r-primary border-t-gray-500 border-l-gray-500 border-b-gray-500 w-12 h-12 transition-transform duration-1000 task2__loading"></div>
+			<div class="mt-2 rounded-full block border-8 border-solid border-r-primary border-t-gray-500 border-l-gray-500 border-b-gray-500 w-12 h-12 transition-transform duration-1000 rotate-180 task2__loading"></div>
 			
 			
 			<div class="task3 mt-4">
