@@ -10,6 +10,8 @@ import { lessonSixPage } from '@/pages/lessons/lesson6/lessonSixPage'
 import { lessonSeventhPage } from '@/pages/lessons/lesson7/lessonSeventhPage'
 import { lessonEightPage } from '@/pages/lessons/lesson8/lessonEightPage'
 import { lessonNinthPage } from '@/pages/lessons/lesson9/lessonNinthPage'
+import { lessonTenthPage } from '@/pages/lessons/lesson10/lessonTenthPage'
+import { lessonElevenPage } from '@/pages/lessons/lesson11/lessonElevenPage'
 
 export interface IRoute {
 	path: string
@@ -56,5 +58,13 @@ export const routes: IRoute[] = [
 	{
 		path: `${PAGES.LESSON}9/`,
 		component: lessonNinthPage
+	},
+	{
+		path: `${PAGES.LESSON}10/`,
+		component: lessonTenthPage
+	},
+	{
+		path: `${PAGES.LESSON}11/`,
+		component: lessonElevenPage
 	}
 ]

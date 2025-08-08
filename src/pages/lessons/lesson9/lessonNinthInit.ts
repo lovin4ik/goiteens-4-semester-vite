@@ -246,6 +246,10 @@ export function lessonNinthInit() {
 		}
 
 		addStudent(newStudent)
+
+		const formTarget = e.target as HTMLFormElement
+
+		formTarget.reset()
 	})
 
 	renderStudentsList()
