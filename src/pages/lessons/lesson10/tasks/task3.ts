@@ -6,8 +6,8 @@ export function thirdTask() {
 	let score = 0
 	let isGameActive = false
 	let gameDuration = 10
-	let intervalId: number
-	let timeoutId: number
+	let intervalId: ReturnType<typeof setInterval>
+	let timeoutId: ReturnType<typeof setTimeout>
 	let currentIndex = -1
 
 	function handleBtnClick(this: HTMLButtonElement) {
@@ -52,11 +52,11 @@ export function thirdTask() {
 			btn.addEventListener('click', handleBtnClick)
 		})
 
-		intervalId = window.setInterval(() => {
+		intervalId = setInterval(() => {
 			activateRandomButton()
 		}, 1000)
 
-		timeoutId = window.setTimeout(() => {
+		timeoutId = setTimeout(() => {
 			isGameActive = false
 			clearInterval(intervalId)
 
