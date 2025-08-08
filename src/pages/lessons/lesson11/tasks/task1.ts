@@ -1,6 +1,6 @@
 //? Створити таймер, який буде починати відлік з 1 хвилини та зменшувати час кожну хвилину. При досягненні 30 секунд, таймер повинен відправляти повідомлення екран про те, що залишилось менше половини часу.
 
-let intervalId: NodeJS.Timeout | null = null
+let intervalId: ReturnType<typeof setInterval>
 
 export function task1() {
 	const timerShow = document.getElementById('timerShow') as HTMLSpanElement

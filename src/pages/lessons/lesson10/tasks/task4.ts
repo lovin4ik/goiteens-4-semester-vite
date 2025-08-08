@@ -8,7 +8,7 @@ export function fourthTask() {
 	const startBtnTask4 = document.getElementById(
 		'startBtnTask4'
 	) as HTMLButtonElement
-	let timeoutId: NodeJS.Timeout
+	let timeoutId: ReturnType<typeof setTimeout>
 
 	startBtnTask4?.addEventListener('click', () => {
 		if (!setDurationInput) return

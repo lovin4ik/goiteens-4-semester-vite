@@ -1,6 +1,6 @@
 //? Створити таймер, який буде починати відлік з 30 секунд та зменшувати час кожну мілісекунду. При досягненні 10 секунд, таймер повинен відтворювати якусь анімацію, а при досягненні 0 секунд — виконувати певну дію, наприклад, робити кнопку почати знову активною.
 
-let intervalId: NodeJS.Timeout | null = null
+let intervalId: ReturnType<typeof setInterval>
 
 export function task2() {
 	const timerShow = document.getElementById('timerShow2') as HTMLSpanElement

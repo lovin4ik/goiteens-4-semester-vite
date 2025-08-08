@@ -2,7 +2,7 @@
 
 const stopCount = 5
 const durationBetweenCount = 1000
-let intervalId: NodeJS.Timeout
+let intervalId: ReturnType<typeof setInterval>
 
 export function firstTask() {
 	const startBtn = document.querySelector('.startBtn__firstTask')
