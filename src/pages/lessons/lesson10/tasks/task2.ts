@@ -6,5 +6,6 @@ export function secondTask() {
 	const loader = document.querySelector('.task2__loading')
 	intervalId = setInterval(() => {
 		loader?.classList.toggle('rotate-180')
+		clearInterval(intervalId)
 	}, 1000)
 }
