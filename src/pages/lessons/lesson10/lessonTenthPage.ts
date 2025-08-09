@@ -11,6 +11,7 @@ export function lessonTenthPage() {
 			<h1 class="text-2xl font-bold">lesson 10</h1>
 			<div class="mt-4">
 				<h2 class="text-lg font-bold">Завдання 1</h2>
+				<span class="block" id="resultTask1"></span>
 				${mainBtn({
 					children: 'розпочати',
 					className: 'startBtn__firstTask'

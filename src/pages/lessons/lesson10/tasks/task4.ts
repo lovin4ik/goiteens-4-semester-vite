@@ -18,6 +18,7 @@ export function fourthTask() {
 		if (isNaN(duration) || duration <= 0) {
 			resultTask4.innerHTML = 'Введіть будь ласка число'
 			console.log('Введіть будь ласка число')
+			startBtnTask4.disabled = false
 			return
 		}
 
