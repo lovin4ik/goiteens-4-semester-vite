@@ -22,17 +22,18 @@ export class CountdownTimer {
 
 		intervalId = setInterval(() => {
 			const time = this.targetDate.getTime() - Date.now()
+
+			if (time < 0 || time > 86400000) {
+				clearInterval(intervalId)
+				return
+			}
+
 			const days = Math.floor(time / (1000 * 60 * 60 * 24))
 			const hours = Math.floor(
 				(time % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
 			)
 			const mins = Math.floor((time % (1000 * 60 * 60)) / (1000 * 60))
 			const secs = Math.floor((time % (1000 * 60)) / 1000)
-
-			if (time < 0) {
-				clearInterval(intervalId)
-				return
-			}
 
 			timeUnits.forEach(unit => {
 				const selectedUnit = document.querySelector<HTMLElement>(

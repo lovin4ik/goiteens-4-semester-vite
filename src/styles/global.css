@@ -64,7 +64,7 @@ body {
 }
 
 #app {
-	@apply font-poppins grid min-h-screen grid-cols-[324px_1fr] grid-rows-[74px_1fr] gap-0 overflow-hidden bg-[#b8c0e0] bg-gradient-to-t bg-[url('/Catppuccin_WAVE_Macchiato.png')] from-[#c8d3d6] via-[#c8d3d6] to-[#fcfafa] bg-cover bg-fixed bg-no-repeat text-black transition-colors dark:bg-[#212131] dark:from-[#1d1e24] dark:via-[#212131] dark:to-[#212131] dark:text-white;
+	@apply font-poppins grid min-h-screen grid-cols-[324px_1fr] grid-rows-[74px_1fr] gap-0 overflow-hidden bg-[#b8c0e0] bg-gradient-to-t bg-[url('/Catppuccin_WAVE_Macchiato.png')] from-[#c8d3d6] via-[#c8d3d6] to-[#fcfafa] bg-cover bg-fixed bg-no-repeat text-black transition-colors dark:bg-[#212131] dark:bg-none dark:from-[#1d1e24] dark:via-[#212131] dark:to-[#212131] dark:text-white;
 }
 
 .shiki {
