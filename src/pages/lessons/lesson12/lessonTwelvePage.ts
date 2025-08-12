@@ -22,24 +22,30 @@ export function lessonTwelvePage() {
 				className: 'mt-4'
 			})}
 
-			<div class="timer flex flex-row gap-6 mt-4" id="timer">
-				<div class="field text-center rounded-xl px-4 py-2 id shadow-ios dark:shadow-ios-dark bg-secondary/20 backdrop-blur-2xl">
-					<span class="label block text-xl ">Days</span>
-					<span class="value text-2xl" data-value="days">--</span>
+			<div class="timer" id="timer">
+				
+				<div class="flex flex-row gap-6 mt-4">
+					<div class="field text-center rounded-xl px-4 py-2 id shadow-ios dark:shadow-ios-dark bg-secondary/20 backdrop-blur-2xl w-[118px]">
+						<span class="label block text-xl ">Days</span>
+						<span class="value text-2xl" data-value="days">--</span>
+					</div>
+					<div class="field text-center rounded-xl px-4 py-2 id shadow-ios dark:shadow-ios-dark bg-secondary/20 backdrop-blur-2xl w-[118px]">
+						<span class="label block text-xl ">Hours</span>
+						<span class="value text-2xl" data-value="hours">--</span>
+					</div>
+					<div class="field text-center rounded-xl px-4 py-2 id shadow-ios dark:shadow-ios-dark bg-secondary/20 backdrop-blur-2xl w-[118px]">
+						<span class="label block text-xl ">Minutes</span>
+						<span class="value text-2xl" data-value="mins">--</span>
+					</div>
+					<div class="field text-center rounded-xl px-4 py-2 id shadow-ios dark:shadow-ios-dark bg-secondary/20 backdrop-blur-2xl w-[118px]">
+						<span class="label block text-xl ">Seconds</span>
+						<span class="value text-2xl" data-value="secs">--</span>
+					</div>
 				</div>
-				<div class="field text-center rounded-xl px-4 py-2 id shadow-ios dark:shadow-ios-dark bg-secondary/20 backdrop-blur-2xl">
-					<span class="label block text-xl ">Hours</span>
-					<span class="value text-2xl" data-value="hours">--</span>
-				</div>
-				<div class="field text-center rounded-xl px-4 py-2 id shadow-ios dark:shadow-ios-dark bg-secondary/20 backdrop-blur-2xl">
-					<span class="label block text-xl ">Minutes</span>
-					<span class="value text-2xl" data-value="mins">--</span>
-				</div>
-				<div class="field text-center rounded-xl px-4 py-2 id shadow-ios dark:shadow-ios-dark bg-secondary/20 backdrop-blur-2xl">
-					<span class="label block text-xl ">Seconds</span>
-					<span class="value text-2xl" data-value="secs">--</span>
-				</div>
+				
+				<span class="text-sm text-gray-500 mt-2 block" id="timerResult"></span>
 			</div>
+
 		</div>
 	`
 }

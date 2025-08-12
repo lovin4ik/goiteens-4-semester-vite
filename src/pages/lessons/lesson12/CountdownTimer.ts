@@ -19,11 +19,30 @@ export class CountdownTimer {
 
 	init() {
 		let intervalId: ReturnType<typeof setInterval>
+		let timeoutId: ReturnType<typeof setTimeout>
 
 		intervalId = setInterval(() => {
 			const time = this.targetDate.getTime() - Date.now()
 
-			if (time < 0 || time > 86400000) {
+			if (time <= 86400000) {
+				if (!this.selector) return
+				const timerResult =
+					this.selector.querySelector<HTMLElement>('#timerResult')
+
+				if (!timerResult) return
+
+				timerResult.innerHTML = 'Введіть час більше 1 дня'
+				clearInterval(intervalId)
+
+				timeoutId = setTimeout(() => {
+					timerResult.innerHTML = ''
+					clearTimeout(timeoutId)
+				})
+
+				return
+			}
+
+			if (time < 0) {
 				clearInterval(intervalId)
 				return
 			}
@@ -36,11 +55,16 @@ export class CountdownTimer {
 			const secs = Math.floor((time % (1000 * 60)) / 1000)
 
 			timeUnits.forEach(unit => {
-				const selectedUnit = document.querySelector<HTMLElement>(
+				if (!this.selector) return
+				const selectedUnit = this.selector.querySelector<HTMLElement>(
 					`[data-value="${unit}"]`
 				)
+				const timerResult =
+					this.selector.querySelector<HTMLElement>('#timerResult')
 
-				if (!selectedUnit) return
+				if (!selectedUnit || !timerResult) return
+
+				timerResult.innerHTML = `${time} milliseconds left`
 
 				switch (unit) {
 					case 'days':
