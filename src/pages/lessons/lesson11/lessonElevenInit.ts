@@ -1,5 +1,5 @@
-import { task1 } from './tasks/task1'
-import { task2 } from './tasks/task2'
+import { task1 } from './tasks/firstTask'
+import { task2 } from './tasks/secondTask'
 
 export function lessonElevenInit() {
 	task1()

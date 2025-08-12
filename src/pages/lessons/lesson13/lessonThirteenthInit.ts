@@ -1,11 +1,9 @@
 import { firstTask } from './tasks/firstTask'
-import { fourthTask } from './tasks/fourthTask'
 import { secondTask } from './tasks/secondTask'
 import { thirdTask } from './tasks/thirdTask'
 
-export function lessonTenthInit() {
+export function lessonThirteenthInit() {
 	firstTask()
 	secondTask()
 	thirdTask()
-	fourthTask()
 }

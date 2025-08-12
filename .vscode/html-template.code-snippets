@@ -2,10 +2,15 @@
 	"template": {
 		"prefix": "efc",
 		"body": [
-			"export function ${TM_FILENAME_BASE}() {",
-			"  return `<div>${TM_FILENAME_BASE}</div>`",
+			"export function ${TM_FILENAME_BASE}(${1}) {",
+			"  return `<div>${TM_FILENAME_BASE}${2}</div>`",
 			"}"
 		],
-		"description": "template"
+		"description": "function component"
+	},
+	"": {
+		"prefix": "fc",
+		"body": ["export function ${TM_FILENAME_BASE}(${1}) {${2}}"],
+		"description": "function component"
 	}
 }
