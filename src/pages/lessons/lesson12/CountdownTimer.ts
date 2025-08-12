@@ -37,7 +37,7 @@ export class CountdownTimer {
 				timeoutId = setTimeout(() => {
 					timerResult.innerHTML = ''
 					clearTimeout(timeoutId)
-				})
+				}, 5000)
 
 				return
 			}
